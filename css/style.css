@@ -26,6 +26,12 @@ a:hover {
     color: var(--link-hover);
     text-decoration: none;
 }
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: #000;
+}
 
 
 /* ************* */
@@ -61,6 +67,30 @@ a:hover {
     text-decoration: none;
 }
 
+/* ************* */
+/* footer styles */
+/* ************* */
+.footer .footer-top .nav-link {
+    color: var(--dark);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.footer .footer-bottom {
+    border-top: 1px solid rgba(124, 124, 124, .4);
+}
+
+.footer .footer-bottom .nav-link {
+    color: var(--gray);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.footer .footer-bottom .social-icons .nav-link {
+    padding: .5rem .5rem;
+}
+
+
 /* **************** */
 /* main page styles */
 /* **************** */
@@ -81,7 +111,7 @@ a:hover {
 
 .middle-line {
     background: url(../img/ellipse_4.png) no-repeat 0 0, var(--second);
-    background-position: -36px -33px;
+    background-position: 0 0;
     background-size: contain;
     align-items: center;
 }
@@ -91,6 +121,9 @@ a:hover {
     left: 0;
 }
 
+.content-section {
+    background-color: var(--second);    
+}
 
 /* buttons */
 
@@ -221,31 +254,6 @@ a:hover {
     box-shadow: none;
 }
 
-
-
-
-
-
-
-.footer .footer-top .nav-link {
-    color: var(--dark);
-    font-size: 0.875rem;
-    text-decoration: none;
-}
-
-.footer .footer-bottom {
-    border-top: 1px solid rgba(124, 124, 124, .4);
-}
-
-.footer .footer-bottom .nav-link {
-    color: var(--gray);
-    font-size: 0.875rem;
-    text-decoration: none;
-}
-
-.footer .footer-bottom .social-icons .nav-link {
-    padding: .5rem .5rem;
-}
 
 
 /* https://kenwheeler.github.io/slick/ */

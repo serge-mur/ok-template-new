@@ -52,7 +52,15 @@
                 </div>
                 <div class="col-auto">
                     <div class="search-block">
-                        <input type="text">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><img src="img/search_ico.png" alt=""></span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Искать</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-auto">
@@ -77,8 +85,48 @@
             
             <div class="row">
                 <div class="col-3">
-                    menu
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="goods-tab" data-toggle="tab" href="#goods" role="tab" aria-controls="goods" aria-selected="true">Товары</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="brands-tab" data-toggle="tab" href="#brands" role="tab" aria-controls="brands" aria-selected="false">Бренды</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="goods" role="tabpanel" aria-labelledby="goods-tab">
+                            <button class="btn">Выбрать поставщика</button>
+                            <div class="nav flex-column">
+                                <a class="nav-link active" href="#">Бакалея</a>
+                                <a class="nav-link" href="#">Вода, напитки, соки</a>
+                                <a class="nav-link" href="#">Детское питание</a>
+                                <a class="nav-link" href="#">Замороженные продукты</a>
+                                <a class="nav-link" href="#">Кондитерские изделия</a>
+                                <a class="nav-link" href="#">Консервация</a>
+                                <a class="nav-link" href="#">Молочные продкуты, сыры, яйца</a>
+                                <a class="nav-link" href="#">Мясо, птица, рыба, гастрономия</a>
+                                <a class="nav-link" href="#">Овощи, фрукты, зелень</a>
+                                <a class="nav-link" href="#">Товары для дома</a>
+                                <a class="nav-link" href="#">Товары для животных</a>
+                                <a class="nav-link" href="#">Чай, кофе, какао</a>
+                                <a class="nav-link" href="#">Для офисов</a>
+                                <a class="nav-link" href="#">Для HoReCa</a>
+                                <a class="nav-link" href="#">Для магазинов</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="brands" role="tabpanel" aria-labelledby="brands-tab">
+                            <h3>Бренды по категориям</h3>
+                            <div class="nav flex-column">
+                                <a class="nav-link active" href="#">Бакалея</a>
+                                <a class="nav-link" href="#">Вода, напитки, соки</a>
+                                <a class="nav-link" href="#">Детское питание</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
                 <div class="col-9">
                     <div class="utp-line">
                         <div class="utp-block">
@@ -90,15 +138,16 @@
                     </div>
 
                     <div class="main-slider">
-                        main-slider
+                        <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
+                        <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
                     </div>
 
                     <div class="row">
-                        <div class="col-6">
-                            main-banner-1
+                        <div class="col-5">
+                            <img class="img-fluid" src="img/banner_top_1.png" alt="">
                         </div>
-                        <div class="col-6">
-                            main-banner-2
+                        <div class="col-7">
+                            <img class="img-fluid" src="img/banner_top_2.png" alt="">
                         </div>
                     </div>
 
@@ -168,7 +217,46 @@
             </div>
         </div>
 
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="#">
+                            <img class="img-fluid" src="img/long_banner.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-9">
+                        <h2>Новинки</h2>
+                        <div class="card-slider">
+                            card-slider
+                        </div>
 
+                        <h2>Товары со скидками</h2>
+                        <div class="card-slider">
+                            card-slider
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Подборки</h2>
+                        <div class="card-slider">
+                            card-slider
+                        </div>
+                        
+                        <h2>Рецепты</h2>
+                        <div class="card-slider">
+                            card-slider
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </section>
 
     </main>
 
@@ -177,7 +265,9 @@
         <div class="container">
             <div class="row footer-top py-3">
                 <div class="col-12 text-center mb-5">
-                    <a class="d-block" href="http://otkorobki.ru"><img class="img-fluid" src="img/logo.svg" style="width: 320px;" alt="otkorobki.ru"></a>
+                    <a class="d-inline-block" href="http://otkorobki.ru">
+                        <img class="img-fluid" src="img/logo.png" alt="otkorobki.ru">
+                    </a>
                 </div>
                 <div class="col-12 col-lg-4 text-left">
                     <nav class="nav flex-column">
