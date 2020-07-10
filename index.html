@@ -23,7 +23,7 @@
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-auto">
                         <a href="#" class="city-choice">
-                            <img src="img/place_ico.png" alt=""><span>Москва</span>
+                            <img src="img/place_ico.png" alt=""><span>Петропавловск-Камчатский</span>
                         </a>
                     </div>
                     <div class="col-auto">
@@ -44,13 +44,13 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center justify-content-between flex-nowrap py-3">
                 <div class="col-auto">
                     <a href="/">
                         <img src="img/logo.png" alt="">
                     </a>
                 </div>
-                <div class="col-auto">
+                <div class="col">
                     <div class="search-block">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -65,15 +65,31 @@
                 </div>
                 <div class="col-auto">
                     <div class="user-block">
-                        <img src="img/user_ico.png" alt="">
-                        <img src="img/favorites_ico.png" alt="">
+                        <a href="#">
+                            <img src="img/user_ico.png" alt="">
+                            <div>Войти</div>
+                        </a>
+                        <a href="#">
+                            <img src="img/favorites_ico.png" alt="">
+                            <div>Избранное</div>
+                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="cart-block">
-                        <img src="img/cart_1.png" alt="">
-                        <img src="img/cart_2.png" alt="">
-                        <img src="img/cart_3.png" alt="">
+                        <a href="#">
+                            <div>800 &#8381;</div>
+                            <img src="img/cart_1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <div>800 &#8381;</div>
+                            <img src="img/cart_2.png" alt="">
+                        </a>
+                        <a href="#">
+                            <div>800 &#8381;</div>
+                            <img src="img/cart_3.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -86,41 +102,51 @@
             <div class="row">
                 <div class="col-3">
 
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav" id="main-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <a class="nav-link active" id="goods-tab" data-toggle="tab" href="#goods" role="tab" aria-controls="goods" aria-selected="true">Товары</a>
+                          <a class="nav-link active" id="goods-tab" data-toggle="tab" href="#goods-tab-content" role="tab" aria-controls="goods" aria-selected="true">Товары</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="brands-tab" data-toggle="tab" href="#brands" role="tab" aria-controls="brands" aria-selected="false">Бренды</a>
+                          <a class="nav-link" id="brands-tab" data-toggle="tab" href="#brands-tab-content" role="tab" aria-controls="brands" aria-selected="false">Бренды</a>
                         </li>
                     </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="goods" role="tabpanel" aria-labelledby="goods-tab">
-                            <button class="btn">Выбрать поставщика</button>
+                    <div class="tab-content" id="main-tab-content">
+                        <div class="tab-pane fade show active" id="goods-tab-content" role="tabpanel" aria-labelledby="goods-tab">
+                            <button class="btn btn-menu my-3">Выбрать поставщика</button>
+                            <div class="nav flex-column">
+                                <a class="nav-link active" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Бакалея</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Вода, напитки, соки</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Детское питание</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Замороженные продукты</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Кондитерские изделия</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Консервация</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Молочные продкуты, сыры, яйца</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Мясо, птица, рыба, гастрономия</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Овощи, фрукты, зелень</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Товары для дома</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Товары для животных</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Чай, кофе, какао</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для офисов</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для HoReCa</span></a>
+                                <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для магазинов</span></a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="brands-tab-content" role="tabpanel" aria-labelledby="brands-tab">
+                            <h3 class="my-3">Бренды по категориям</h3>
                             <div class="nav flex-column">
                                 <a class="nav-link active" href="#">Бакалея</a>
                                 <a class="nav-link" href="#">Вода, напитки, соки</a>
                                 <a class="nav-link" href="#">Детское питание</a>
                                 <a class="nav-link" href="#">Замороженные продукты</a>
                                 <a class="nav-link" href="#">Кондитерские изделия</a>
-                                <a class="nav-link" href="#">Консервация</a>
                                 <a class="nav-link" href="#">Молочные продкуты, сыры, яйца</a>
                                 <a class="nav-link" href="#">Мясо, птица, рыба, гастрономия</a>
                                 <a class="nav-link" href="#">Овощи, фрукты, зелень</a>
                                 <a class="nav-link" href="#">Товары для дома</a>
-                                <a class="nav-link" href="#">Товары для животных</a>
                                 <a class="nav-link" href="#">Чай, кофе, какао</a>
                                 <a class="nav-link" href="#">Для офисов</a>
                                 <a class="nav-link" href="#">Для HoReCa</a>
                                 <a class="nav-link" href="#">Для магазинов</a>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="brands" role="tabpanel" aria-labelledby="brands-tab">
-                            <h3>Бренды по категориям</h3>
-                            <div class="nav flex-column">
-                                <a class="nav-link active" href="#">Бакалея</a>
-                                <a class="nav-link" href="#">Вода, напитки, соки</a>
-                                <a class="nav-link" href="#">Детское питание</a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +155,7 @@
 
                 <div class="col-9">
                     <div class="utp-line">
-                        <div class="utp-block">
+                        <div class="utp-block py-2">
                             <span class="utp-item">Дешевле чем в магазинах на 30-50% <img src="img/crown_ico.png" alt=""></span>
                             <span class="utp-item">Постоянные акции <img src="img/discount_ico.png" alt=""></span>
                             <span class="utp-item">Вкусные цены <img src="img/tag_ico.png" alt=""></span>
@@ -137,29 +163,70 @@
                         </div>
                     </div>
 
-                    <div class="main-slider">
-                        <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
-                        <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-5">
-                            <img class="img-fluid" src="img/banner_top_1.png" alt="">
+                    <div class="tabtab">
+                        <div class="main-slider">
+                            <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
+                            <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
                         </div>
-                        <div class="col-7">
-                            <img class="img-fluid" src="img/banner_top_2.png" alt="">
+
+                        <div class="row">
+                            <div class="col-5">
+                                <img class="img-fluid" src="img/banner_top_1.png" alt="">
+                            </div>
+                            <div class="col-7">
+                                <img class="img-fluid" src="img/banner_top_2.png" alt="">
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <section class="">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Товары которые вы смотрели и покупали</h2>
+                        <div class="title-line">
+                            <h2>Товары которые вы смотрели и покупали</h2>
+                            <div>slider-nav</div>
+                        </div>
+                        
                         <div class="card-slider">
-                            card-slider
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>                
@@ -168,50 +235,82 @@
             <section class="">
                 <div class="row">
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_1.jpg" alt="">
                     </a>
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_2.jpg" alt="">
                     </a>
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_3.jpg" alt="">
                     </a>
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_4.jpg" alt="">
                     </a>
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_5.jpg" alt="">
                     </a>
                     <a href="#" class="col-4 mb-4">
-                        <img class="img-fluid" src="img/banner_item.png" alt="">
+                        <img class="img-fluid" src="img/banners/banner_6.jpg" alt="">
                     </a>
-                </div>                
-            </section>
-
-            <section class="utp-section">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="utp-slider">
-                            utp-slider
-                        </div>
-                    </div>
                 </div>                
             </section>
 
         </div><!-- end container -->
 
-        <div class="middle-line">
-
+        <section class="utp-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 position-relative">
+                    <div class="col-12">
+                        <div class="utp-slider">
+                            <div class="utp-item">
+                                <img src="img/utp/fact_1.png" alt="">
+                                <div>Покупай без посредников</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_2.png" alt="">
+                                <div>Контроль качества и свежести продуктов </div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_3.png" alt="">
+                                <div>Поддержка 24/7</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_4.png" alt="">
+                                <div>Надежная доставка от поставщиков</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_9.png" alt="">
+                                <div>Оплата наличными и картой</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_10.png" alt="">
+                                <div>Безопасная оплата</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_11.png" alt="">
+                                <div>Спец условия для юр. лиц</div>
+                            </div>
+                            <div class="utp-item">
+                                <img src="img/utp/fact_12.png" alt="">
+                                <div>Более 500 000 позиций</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>                
+        </section>
+
+        <div class="middle-line">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 position-relative h-100">
                         <div class="absolute-image">
                             <img src="img/ml_image.png" alt="">
                         </div>                        
-                        <div>
-                            Зарегистрируйтесь или войдите в личный кабинет, что получать лучшие предложения и получать бонусы целыми коробками!
+                        <div class="middle-line-text">
+                            <span>Зарегистрируйтесь или войдите в личный кабинет, что получать <span>лучшие предложения</span> и получать бонусы целыми коробками!</span>
+                            <a href="#" class="btn">Войти</a>
                         </div>
-                        <a href="#" class="btn">Войти</a>
                     </div>
                 </div>                    
             </div>
@@ -226,14 +325,34 @@
                         </a>
                     </div>
                     <div class="col-9">
-                        <h2>Новинки</h2>
-                        <div class="card-slider">
-                            card-slider
+                        
+                        <div class="title-line">
+                            <h2>Новинки</h2>
+                            <div>slider-nav</div>
                         </div>
-
-                        <h2>Товары со скидками</h2>
                         <div class="card-slider">
-                            card-slider
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="title-line">
+                            <h2>Товары со скидками</h2>
+                            <div>slider-nav</div>
+                        </div>
+                        
+                        <div class="card-slider">
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>                  
@@ -244,19 +363,222 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Подборки</h2>
+                        
+                        <div class="title-line">
+                            <h2>Подборки</h2>
+                            <div>slider-nav</div>
+                        </div>
                         <div class="card-slider">
-                            card-slider
+                            <a href="#">
+                                <img src="img/content_card_1.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/content_card_2.jpg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="img/content_card_3.jpg" alt="">
+                            </a>
                         </div>
                         
-                        <h2>Рецепты</h2>
+                        <div class="title-line">
+                            <h2>Рецепты</h2>
+                            <div>slider-nav</div>
+                        </div>
                         <div class="card-slider">
-                            card-slider
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/content_img_1.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">5 завтраков за 10 минут, в кото...</h5>
+                                    <p class="card-text">Сегодня мы расскажем вам несколько простых и очень вкусных рецептов завтраков. Завтрак - это ваш заряд бодрости и витаминов на целый день!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                    <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/content_img_2.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Десерты с мороженым. Как быс...</h5>
+                                    <p class="card-text">Пока на дворе властвует лето пришло мы решили порадовать вас и ваших близких актуальными рецептами десертов на основе мороженого.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                    <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/content_img_3.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Для тех, кто на диете: топ рецето...</h5>
+                                    <p class="card-text">Наконец-то лето вступает в свои права, и мы решили порадовать вас прекрасными свежими прохладительными напитками.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                    <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>                  
             </div>
         </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-line">
+                            <h2>Выбор покупателей</h2>
+                            <div>slider-nav</div>
+                        </div>
+                        <div class="card-slider">
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <a href="#" class="col-6">
+                        <img class="img-fluid" src="img/banners/banner_2_1.jpg" alt="">
+                    </a>
+                    <a href="#" class="col-6">
+                        <img class="img-fluid" src="img/banners/banner_2_2.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-line">
+                            <h2>Молочные продукты</h2>
+                            <div>slider-nav</div>
+                        </div>
+                        <div class="card-slider">
+                            <div class="card" style="width: 270px">
+                                <img src="img/image4.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</h5>
+                                    <a href="#" class="btn btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Популярные бренды</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="card">
+                            <img src="img/brands/johnsonbaby.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Сейчас скидка по 14 продуктам этого бренда</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Смотреть еще</a>
+        </section>        
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="img/content_img_2_1.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Секреты хранения кондитерских...</h5>
+                                <p class="card-text">Кондитерские изделия и сладости есть в каждом доме. Их любят и взрослые, и дети. И сегодня мы расскажем о том, как правильно их хранить, чтобы они могли радовать вас как можно дольше.</p>
+                            </div>
+                            <div class="card-footer">
+                                <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="img/content_img_2_2.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Секреты хранения кондитерских...</h5>
+                                <p class="card-text">Кондитерские изделия и сладости есть в каждом доме. Их любят и взрослые, и дети. И сегодня мы расскажем о том, как правильно их хранить, чтобы они могли радовать вас как можно дольше.</p>
+                            </div>
+                            <div class="card-footer">
+                                <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="img/content_img_2_3.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Секреты хранения кондитерских...</h5>
+                                <p class="card-text">Кондитерские изделия и сладости есть в каждом доме. Их любят и взрослые, и дети. И сегодня мы расскажем о том, как правильно их хранить, чтобы они могли радовать вас как можно дольше.</p>
+                            </div>
+                            <div class="card-footer">
+                                <span><img src="img/mdi_access_time.png" alt=""> Время приготовления: 10 мин.</span>
+                                <span><img src="img/mdi_date_range.png" alt=""> 06/07/2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Заголовок</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid" src="img/info.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <span>Оставьте e-mail, чтобы подписаться на акции</span>
+                    </div>
+                    <div class="col-6">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="mail" class="form-control" id="mail" placeholder="Ваш e-mail" value="">
+                            </div>
+                            <button type="submit" class="btn">Подписаться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
