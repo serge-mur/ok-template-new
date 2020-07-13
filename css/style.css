@@ -246,47 +246,114 @@ h2 {
     background-color: var(--second);    
 }
 .collection-item {
-    width: 270px;
+    /* width: 270px; */
 }
-.recipes-card {
-    width: 270px;
+.card-recipes {
+    /* width: 270px; */
     border-color: transparent;
     background-color: transparent;    
     border-radius: 10px;
 }
-.recipes-card .card-body {
+.card-recipes .card-body {
     padding: 5px 0;
 }
-.recipes-card .card-title {
+.card-recipes .card-title {
     color: #000;
     font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none; 
     letter-spacing: 0.05em;   
 }
-.recipes-card .card-text {
+.card-recipes .card-text {
     color: var(--black-gray);
     font-size: 0.875rem;
     text-decoration: none; 
     letter-spacing: 0.05em;
 }
-.recipes-card .card-footer {
+.card-recipes .card-footer {
     display: flex;
     padding: 5px 0;
     border-color: transparent;
     background-color: transparent; 
 }
-.recipes-card .card-footer img {
+.card-recipes .card-footer img {
     display: inline;
 }
-.recipes-card .card-footer span {
+.card-recipes .card-footer span {
     color: #000;
     font-size: 0.6875rem;
     padding-right: 1.875rem;
 }
-
+.articles-section .card-recipes {
+    width: auto;
+}
+.brands-section h2 {
+    text-align: center;
+}
+.card-brands {
+    border-color: var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.card-brands .card-badge {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-brands .card-img-top {
+    display: block;
+    margin: 30px auto;
+    max-width: 150px;
+    max-height: 150px;
+}
+.card-brands .card-body {
+    padding: 5px 20px;
+}
+.card-brands .card-title {
+    color: var(--black-gray);
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
+}
+.card-brands .card-title:hover {
+    text-decoration: none;
+}
 .info-section {
-    background-color: var(--second);    
+    background-color: var(--second);
+    padding: 40px 0;
+    margin-bottom: 2rem;
+}
+.info-section .text-block {
+    color: var(--black-gray);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.description-section {
+    background-color: var(--second);
+    padding: 2.5rem 0;
+}
+.description-section .text-block {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.description-section .form-control {
+    width: 350px;
+    border: transparent;
+    border-radius: 100px;
+    padding: 1.375rem 1.75rem;
+    margin-right: 1.5rem;
 }
 
 
@@ -310,7 +377,7 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.card-product .img-link img {
+.card-product .img-link .card-img-top {
     max-width: 180px;
     max-height: 180px;
 }
@@ -423,15 +490,16 @@ h2 {
     box-shadow: none;
 }
 
+
 .btn-secondary {
-    color: var(--dark);
+    color: var(--black-gray);
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     border-width: 2px;
     background-color: transparent;
-    border-color: var(--primary);
+    border-color: var(--main);
     border-radius: 100px;
     padding: 10px 20px;
 }
@@ -440,14 +508,14 @@ h2 {
     color: #fff;
     background-color: var(--light);
     border-color: var(--light);
-    box-shadow: 0px 3px 0px #29A6A6;
+    box-shadow: 0px 3px 0px var(--main);
 }
 
 .btn-secondary:focus,
 .btn-secondary.focus {
     color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--main);
+    border-color: var(--main);
     box-shadow: none;
 }
 
@@ -455,8 +523,8 @@ h2 {
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show>.btn-secondary.dropdown-toggle {
     color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--main);
+    border-color: var(--main);
     box-shadow: none;
 }
 
@@ -465,50 +533,10 @@ h2 {
 .show>.btn-secondary.dropdown-toggle:focus {
     box-shadow: none;
 }
-
-.btn-primary2 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: var(--light);
-    border-color: var(--light);
-    box-shadow: 0px 3px 0px #29A6A6;
-    border-radius: 100px;
-    padding: 10px 20px;
+.btn-sm  {
+    font-size: 0.875rem;
+    text-transform: unset;
 }
-
-.btn-primary2:hover {
-    color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
-
-.btn-primary2:focus,
-.btn-primary2.focus {
-    color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
-    box-shadow: none;
-}
-
-.btn-primary2:not(:disabled):not(.disabled):active,
-.btn-primary2:not(:disabled):not(.disabled).active,
-.show>.btn-primary2.dropdown-toggle {
-    color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
-    box-shadow: none;
-}
-
-.btn-primary2:not(:disabled):not(.disabled):active:focus,
-.btn-primary2:not(:disabled):not(.disabled).active:focus,
-.show>.btn-primary2.dropdown-toggle:focus {
-    box-shadow: none;
-}
-
-
 
 /* https://kenwheeler.github.io/slick/ */
 
@@ -534,15 +562,12 @@ h2 {
 .slick-next {
     position: absolute;
     display: block;
-    line-height: 0px;
-    font-size: 0px;
+    width: 54px;
+    height: 31px;
     cursor: pointer;
-    background: transparent;
-    color: transparent;
     top: 50%;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
     padding: 0;
+    font-size: 0;
     border: none;
     outline: none;
 }
@@ -552,47 +577,14 @@ h2 {
 .slick-next:hover,
 .slick-next:focus {
     outline: none;
-    background: transparent;
-    color: transparent;
 }
-
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-    opacity: 1;
-}
-
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-    opacity: 0.75;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: "slick";
-    font-size: 40px;
-    line-height: 1;
-    color: #adadad;
-    opacity: 0.7;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .slick-prev {
-    left: -40px;
+    background: url(../img/slider-arrow-left-lg.png);
+    left: 0;
 }
-
-.slick-prev:before {
-    content: "←";
-}
-
 .slick-next {
-    right: -40px;
-}
-
-.slick-next:before {
-    content: "→";
+    background: url(../img/slider-arrow-right-lg.png);
+    right: 0;
 }
 
 
@@ -618,7 +610,7 @@ h2 {
     display: inline-block;
     text-align: center;
     width: auto;
-    margin: 0 8px;
+    margin: 0 5px;
     cursor: pointer;
 }
 
@@ -627,8 +619,9 @@ h2 {
     background-color: var(--gray);
     opacity: .3;
     display: inline-block;
-    height: 8px;
-    width: 8px;
+    vertical-align: middle;
+    height: 12px;
+    width: 12px;
     outline: none;
     line-height: 0px;
     font-size: 0px;
@@ -644,7 +637,7 @@ h2 {
 }
 
 .slick-dots li.slick-active button {
-    background-color: var(--primary);
+    background-color: var(--main);
     opacity: 1;
     width: 30px;
 }
@@ -653,6 +646,87 @@ h2 {
 .slick-slide * {
     outline: none !important;
 }
+
+
+/* naigation panel */
+.slick-dots-wrapper {
+    position: absolute;
+    display: inline-block;
+    top: -60px;
+    right: 0;
+    background-color: var(--second);
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+.slick-dots-wrapper .slick-dots {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+.slick-dots-prev,
+.slick-dots-next {
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 16px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.slick-dots-prev:hover,
+.slick-dots-prev:focus,
+.slick-dots-next:hover,
+.slick-dots-next:focus {
+    outline: none;
+    color: transparent;
+}
+
+.slick-dots-prev.slick-disabled,
+.slick-dots-next.slick-disabled {
+    opacity: 0.75;
+}
+
+.slick-dots-prev {
+    background: url(../img/slider-arrow-left.png);
+    margin-right: 1rem;
+}
+.slick-dots-next {
+    background: url(../img/slider-arrow-right.png);
+    margin-left: 1rem;
+}
+
+/* customization */
+.main-slider .slick-dots-wrapper {
+
+    top: 310px;
+    right: calc(50% - 93px);
+}
+.card-slider .slick-slide,
+.card-slider-3col .slick-slide {
+    padding: 0 .5rem;
+}
+
+.card-slider .card,
+.card-slider-3col .card,
+.card-slider-3col .collection-item {
+    min-width: auto;
+}
+.utp-slider {
+    padding: 0 60px;
+}
+
+
+
+.section-devider {
+    margin-bottom: 90px;
+}
+section h2 {
+    margin-bottom: 1.5rem;
+}
+
 
 
 @media (max-width: 575px) {
