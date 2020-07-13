@@ -10,6 +10,7 @@
     --gray: #7C7C7C;  
     --black-gray: #484848;
     --white-gray: #F5F5F5;
+    --border: #CBCBCB;
 
 }
 
@@ -201,6 +202,7 @@ h2 {
 }
 .utp-section {
     background-color: var(--second);
+    padding: 50px 0;
 }
 .utp-section .utp-item {
     color: var(--black-gray);
@@ -243,10 +245,139 @@ h2 {
 .content-section {
     background-color: var(--second);    
 }
+.collection-item {
+    width: 270px;
+}
+.recipes-card {
+    width: 270px;
+    border-color: transparent;
+    background-color: transparent;    
+    border-radius: 10px;
+}
+.recipes-card .card-body {
+    padding: 5px 0;
+}
+.recipes-card .card-title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none; 
+    letter-spacing: 0.05em;   
+}
+.recipes-card .card-text {
+    color: var(--black-gray);
+    font-size: 0.875rem;
+    text-decoration: none; 
+    letter-spacing: 0.05em;
+}
+.recipes-card .card-footer {
+    display: flex;
+    padding: 5px 0;
+    border-color: transparent;
+    background-color: transparent; 
+}
+.recipes-card .card-footer img {
+    display: inline;
+}
+.recipes-card .card-footer span {
+    color: #000;
+    font-size: 0.6875rem;
+    padding-right: 1.875rem;
+}
 
 .info-section {
     background-color: var(--second);    
 }
+
+
+/* **************** */
+/* mini card styles */
+/* **************** */
+
+/* Normal state */
+
+.card-product {
+    min-width: 270px;
+    border-color: var(--border);
+    border-radius: 10px;
+}
+.card-product .card-header {
+    padding: 5px 20px;
+    opacity: 0;
+}
+.card-product .img-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-product .img-link img {
+    max-width: 180px;
+    max-height: 180px;
+}
+.card-product .card-body {
+    padding: 5px 20px;
+}
+.card-product .card-title {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;    
+}
+.card-product .separator {
+    background-color: var(--main);
+    width: 95px;
+    height: 2px;
+    border-radius: 0px 100px 100px 0px;
+    margin-left: -20px;
+}
+.card-product .buy-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-product .buy-block .price {
+    color: var(--main);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.card-product .buy-block .btn-buy {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--main);
+    border-color: var(--main);
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+.card-product .buy-block .btn-buy:hover {
+    color: #fff;
+    background-color: var(--light);
+    border-color: var(--light);
+    box-shadow: 0px 3px 0px var(--main);
+} 
+.card-product .card-footer {
+    padding: 5px 20px;
+    background-color: transparent;
+    border-top: transparent;
+}
+.card-product .text-sold-by {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+.card-product .text-availability {
+    color: var(--gray);
+    font-size: 0.875rem;
+}
+.card-product .text-availability img {
+    display: inline;
+}
+
+
+
+
 
 /* buttons */
 
@@ -256,8 +387,8 @@ h2 {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--main);
+    border-color: var(--main);
     border-radius: 100px;
     padding: 10px 20px;
 }
@@ -266,14 +397,14 @@ h2 {
     color: #fff;
     background-color: var(--light);
     border-color: var(--light);
-    box-shadow: 0px 3px 0px #29A6A6;
+    box-shadow: 0px 3px 0px var(--main);
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--main);
+    border-color: var(--main);
     box-shadow: none;
 }
 
@@ -281,8 +412,8 @@ h2 {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--main);
+    border-color: var(--main);
     box-shadow: none;
 }
 

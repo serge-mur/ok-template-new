@@ -18,4 +18,18 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('.collection-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true
+    });
+
+    $('.recipes-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true
+    });
+
 });
