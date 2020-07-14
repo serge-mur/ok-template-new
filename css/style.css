@@ -195,11 +195,7 @@ h2 {
     font-size: 0.875rem;
     margin-right: 1rem;
 }
-.title-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 .utp-section {
     background-color: var(--second);
     padding: 50px 0;
@@ -212,7 +208,7 @@ h2 {
     text-align: center;
 }
 .utp-section .utp-item img {
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
 }
 
 .middle-line {
@@ -700,36 +696,94 @@ h2 {
 
 /* customization */
 .main-slider .slick-dots-wrapper {
-
     top: 310px;
     right: calc(50% - 93px);
 }
+
 .card-slider .slick-slide,
-.card-slider-3col .slick-slide {
+.utp-slider .utp-item,
+.recipes-slider .slick-slide,
+.collection-slider .slick-slide,
+.article-slider .slick-slide {
     padding: 0 .5rem;
 }
 
 .card-slider .card,
-.card-slider-3col .card,
-.card-slider-3col .collection-item {
+.recipes-slider .card,
+.collection-slider .collection-item,
+.article-slider .card {
     min-width: auto;
+    
 }
+
 .utp-slider {
     padding: 0 60px;
 }
 
-
-
 .section-devider {
     margin-bottom: 90px;
 }
+
 section h2 {
     margin-bottom: 1.5rem;
 }
 
-
-
 @media (max-width: 575px) {
+    
+    section h2 {
+        font-size: 1.25rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mob-gutters {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card-slider .card {
+        width: 220px;
+    }
+    .collection-slider .collection-item {
+        width: 220px;    
+    }
+    .recipes-slider .card {
+        width: 220px;
+    }
+    .article-slider .card {
+        width: 220px;
+    }
+    .utp-section .utp-item {
+        max-width: 172px;
+        font-size: 1rem;
+    }
+    .middle-line {
+        background: var(--second);
+        align-items: center;
+        margin-top: 150px;
+        height: auto;
+    }
+    .middle-line .middle-line-text,
+    .middle-line .btn {
+        display: block;
+    }
+    .middle-line .absolute-image {
+        top: -110px;
+        left: calc(50% - 110px);
+    }
+    .middle-line .absolute-image img {
+        width: 220px;
+    }
+    .utp-slider {
+        padding: 0;
+    }
+    .description-section .form-control {
+        width: auto;
+    }
 
+}
 
+/* init */
+#tab-2-brands {
+    display: none;
 }
