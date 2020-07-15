@@ -1,5 +1,36 @@
 $(document).ready(function() {
-    
+
+    // https://github.com/Mango/slideout
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'side': 'right',
+        'touch': false
+    });
+
+    function close(eve) {
+        eve.preventDefault();
+        slideout.close();
+    }
+    slideout
+        .on('beforeopen', function() {
+            this.panel.classList.add('panel-open');
+        })
+        .on('open', function() {
+            this.panel.addEventListener('click', close);
+        })
+        .on('beforeclose', function() {
+            this.panel.classList.remove('panel-open');
+            this.panel.removeEventListener('click', close);
+        });
+
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+    });    
+
+
     // табы на главной
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         console.log(e.target.id);
@@ -58,7 +89,7 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        dots: false,
+        dots: true,
         responsive: [{
             breakpoint: 992,
             settings: {
@@ -359,6 +390,15 @@ $(document).ready(function() {
         setArrows('#slider-product-4.card-slider');
         setArrows('#slider-product-5.card-slider');
         setArrows('.article-slider');
+    }
+
+    if ($(window).width() <= 575) {
+        $('.banner-slider').slick({
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });        
     }
 
 
