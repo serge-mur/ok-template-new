@@ -131,42 +131,47 @@
                     <div class="col-auto">
                         <div class="cart-block">
                             <a href="#">
-                                <div>800 &#8381;</div>
                                 <img src="img/cart_1.png" alt="">
+                                <div>800 &#8381;</div>
                             </a>
                             <a href="#">
-                                <div>800 &#8381;</div>
                                 <img src="img/cart_2.png" alt="">
+                                <div>800 &#8381;</div>
                             </a>
                             <a href="#">
-                                <div>800 &#8381;</div>
                                 <img src="img/cart_3.png" alt="">
+                                <div>800 &#8381;</div>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>            
-        </div>
-
-    </header>
-
-    <main role="main">        
-        <div class="container">
-            
-            <div class="row section-devider">
-                <div class="col-3 d-none d-lg-block">
-
-                    <ul class="nav" id="main-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link active" id="goods-tab" data-toggle="tab" href="#goods-tab-content" role="tab" aria-controls="goods" aria-selected="true">Товары</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="brands-tab" data-toggle="tab" href="#brands-tab-content" role="tab" aria-controls="brands" aria-selected="false">Бренды</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="main-tab-content">
-                        <div class="tab-pane fade show active" id="goods-tab-content" role="tabpanel" aria-labelledby="goods-tab">
-                            <button class="btn btn-menu my-3">Выбрать поставщика</button>
+                <div class="row">
+                    <div class="col-12 position-relative">
+                        <div class="header-nav d-flex">
+                            <div class="btn-group mr-4">
+                                <button class="btn" type="button" id="main-menu-btn">
+                                    <img src="img/burger_white.png" alt=""> Товары
+                                </button>
+                            
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        для частных лиц
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">для частных лиц</a>
+                                        <a class="dropdown-item" href="#">для юр. лиц</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav">
+                                <a href="#" class="nav-link">Бренды</a>
+                                <a href="#" class="nav-link">Поставщики</a>
+                            </div>
+                        </div>
+ 
+                        <div class="main-menu">
+                            <h3>Категории товаров:</h3>
+                            <button class="btn my-3">Выбрать поставщика</button>
                             <div class="nav flex-column">
                                 <a class="nav-link active" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Бакалея</span></a>
                                 <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Вода, напитки, соки</span></a>
@@ -185,92 +190,103 @@
                                 <a class="nav-link" href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для магазинов</span></a>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="brands-tab-content" role="tabpanel" aria-labelledby="brands-tab">
-                            <h3 class="my-3">Бренды по категориям</h3>
-                            <div class="nav flex-column">
-                                <a class="nav-link active" href="#">Бакалея</a>
-                                <a class="nav-link" href="#">Вода, напитки, соки</a>
-                                <a class="nav-link" href="#">Детское питание</a>
-                                <a class="nav-link" href="#">Замороженные продукты</a>
-                                <a class="nav-link" href="#">Кондитерские изделия</a>
-                                <a class="nav-link" href="#">Молочные продкуты, сыры, яйца</a>
-                                <a class="nav-link" href="#">Мясо, птица, рыба, гастрономия</a>
-                                <a class="nav-link" href="#">Овощи, фрукты, зелень</a>
-                                <a class="nav-link" href="#">Товары для дома</a>
-                                <a class="nav-link" href="#">Чай, кофе, какао</a>
-                                <a class="nav-link" href="#">Для офисов</a>
-                                <a class="nav-link" href="#">Для HoReCa</a>
-                                <a class="nav-link" href="#">Для магазинов</a>
-                            </div>
-                        </div>
-                    </div>
 
+                    </div>
                 </div>
+            </div>            
+        </div>
 
-                <div class="col-12 col-lg-9">
-                    <div class="utp-line mb-3 d-none d-lg-block">
-                        <div class="utp-block py-2">
-                            <span class="utp-item">Дешевле чем в магазинах на 30-50% <img src="img/crown_ico.png" alt=""></span>
-                            <span class="utp-item">Постоянные акции <img src="img/discount_ico.png" alt=""></span>
-                            <span class="utp-item">Вкусные цены <img src="img/tag_ico.png" alt=""></span>
-                            <span class="utp-item">Удобная оплата <img src="img/creditcard_ico.png" alt=""></span>
-                        </div>
-                    </div>
+    </header>
 
-                    <div id="tab-2-goods">
-
-                        <div class="mb-3 text-center d-lg-none">
-                            <div class="btn btn-primary"><img src="img/catalog_icon.png" alt=""> Каталог товаров</div>
-                        </div>
-
-                        <div class="main-slider">
-                            <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
-                            <div><img class="img-fluid" src="img/main-slider/1110х185.png" alt=""></div>
-                        </div>
-
-                        <div class="row d-none d-lg-flex">
-                            <a href="#" class="col-6">
-                                <img class="img-fluid" src="img/banner_top_1.png" alt="">
-                            </a>
-                            <a href="#" class="col-6">
-                                <img class="img-fluid" src="img/banner_top_1.png" alt="">
-                            </a>
-                            <!-- <a href="#" class="col-7">
-                                <img class="img-fluid" src="img/banner_top_2.png" alt="">
-                            </a> -->
-                        </div>
-
-                    </div>
-
-                    <div id="tab-2-brands">
-                        <div class="row">
-                            <div class="col-3">
-                                <a href="#" class="card card-brands">
-                                    <div class="card-badge">14</div>
-                                    <img src="img/brands/johnsonbaby.png" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Сейчас скидка по 14 продуктам этого бренда</h5>
+    <main role="main">        
+        <div class="container">
+            <div class="row d-lg-none">
+                <div class="col-12">
+                    <div class="my-3 text-center">
+                        <div class="btn btn-primary"><img src="img/catalog_icon.png" alt=""> Каталог товаров</div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-12">
+                    <div class="main-slider">
+                        <div>
+                            <div class="row">
+                                <div class="col-7 d-flex align-items-center">
+                                    <div class="slider-content">
+                                        <h3 class="title mb-4">Платите только за продукты и не <span>переплачивайте</span> магазину</h3>
+                                        <div class="text1 mb-2">Получайте товары от брендов, экономьте до <span>50%</span> за товар!</div>
+                                        <div class="text2"><span>OTKOROBKI.RU</span> предоставляет тебе такую возможность!</div>
+                                        <div class="my-4">
+                                            <a href="#" class="btn btn-primary mr-3">Перейти в категории</a>
+                                            <a href="#" class="btn btn-secondary">Зарегистрироваться</a>                                        
+                                        </div>                                        
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#" class="card card-brands">
-                                    <div class="card-badge">14</div>
-                                    <img src="img/brands/pepsi.png" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Сейчас скидка по 14 продуктам этого бренда</h5>
-                                    </div>
-                                </a>
+                                </div>
+                                <div class="col-5">
+                                    <img class="img-fluid" src="img/main-slider/slider_image.png" alt="">
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3">
-                            <a href="#" class="btn btn-secondary btn-sm">Смотреть все</a>
+
+                        <div>
+                            <div class="row">
+                                <a href="#" class="col-8">
+                                    <img class="img-fluid" src="img/main-slider/1110х185.png" alt="">
+                                </a>
+                                <div class="col-4">
+                                    <a href="#">
+                                        <img class="img-fluid" src="img/main-slider/top.jpg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="img-fluid" src="img/main-slider/bottom.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
-            <section class="section-devider">
+        </div><!-- end container -->
+
+        <section class="section-steps section-devider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="step-item">
+                            <img class="img-fluid" src="img/step_1.png" alt="">
+                            <div class="title">Выберите товары от одного или нескольких поставщиков, каждый поставщик будет доставлять продукты отдельно</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="step-item">
+                            <img class="img-fluid" src="img/step_2.png" alt="">
+                            <div class="title">Соберите минимальную цену поставщика для комофртной вам доставки товаров</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="step-item">
+                            <img class="img-fluid" src="img/step_3.png" alt="">
+                            <div class="title">Оформите заказ и выберите дату для самовывоза или доставки товаров в удобный вам день</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="step-item">
+                            <img class="img-fluid" src="img/step_4.png" alt="">
+                            <div class="title">Получите товары и сэкономленные деньги отложи себе на подарок!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-secondary">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-devider">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 mob-gutters">
 
@@ -385,10 +401,12 @@
                             </div>
                         </div>
                     </div>
-                </div>                
-            </section>
+                </div>
+            </div>
+        </section>
 
-            <section class="section-devider">
+        <section class="section-devider">
+            <div class="container">
                 <div class="row banner-slider">
                     <a href="#" class="col-4 mb-4">
                         <img class="img-fluid" src="img/banners/banner_1.jpg" alt="">
@@ -408,10 +426,9 @@
                     <a href="#" class="col-4 mb-4">
                         <img class="img-fluid" src="img/banners/banner_6.jpg" alt="">
                     </a>
-                </div>                
-            </section>
-
-        </div><!-- end container -->
+                </div>
+            </div>                
+        </section>
 
         <section class="utp-section">
             <div class="container">
@@ -1218,6 +1235,7 @@
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="lib/slideout/slideout.min.js"></script>
     <script src="lib/slick/slick.min.js"></script>

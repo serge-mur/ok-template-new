@@ -31,17 +31,13 @@ $(document).ready(function() {
     });    
 
 
-    // табы на главной
-    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        console.log(e.target.id);
-        if (e.target.id == 'goods-tab') {
-            $('#tab-2-brands').hide();
-            $('#tab-2-goods').show();
-        } else {
-            $('#tab-2-goods').hide();            
-            $('#tab-2-brands').show();
+    $('#main-menu-btn, .main-menu').hover(
+        function() {
+            $('.main-menu').show();
+        }, function() {
+            $('.main-menu').hide();
         }
-    })
+    );
 
     $('.main-slider').slick({
         dots: true,
