@@ -220,7 +220,6 @@ h2 {
     border: 1px solid var(--border);
     border-radius: 12px;
     background-color: #fff;
-    padding: 10px;
     z-index: 1;
 }
 .main-menu .nav-link {
@@ -245,9 +244,78 @@ h2 {
     padding: 0.3125rem 1.25rem;
     border-radius: 100px;
 }
-#main-menu-btn:hover .main-menu {
-    display: block;
+
+#main-menu {
+    width: 1110px;
+}    
+#main-menu>ul { 
+    margin: 0; 
+    padding: 0; 
+    position: relative;
+    list-style: none;
+    width: 300px; /* Width of Menu Items */ 
+} 
+#main-menu>ul>li { 
+    /* position: relative; */
+} 
+#main-menu>ul>li>ul { 
+    position: absolute; 
+    left: 299px; /*Set 1px less than menu width */ 
+    top: 0;
+    width: calc(1110px - 300px);
+    height: 100%;
+    display: block; 
+    columns: 3;
+    background-color: var(--second);
+} 
+#main-menu>ul>li>ul>li { 
+    display: inline-block; 
+} 
+#main-menu>ul>li:hover>ul {
+    display: block; 
+} 
+#main-menu>ul>li:hover>ul { 
+    visibility: visible; 
+} 
+#main-menu>ul ul {
+    visibility: hidden; 
+} 
+#main-menu ul, li { 
+    margin: 0 0 0 0; 
+} 
+/* Styles for Menu Items */ 
+#main-menu>ul>li>a { 
+    display: block; 
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--black-gray);
+    text-decoration: none; 
+    padding: 5px 10px;
+    /* margin-bottom: 10px; */
+} 
+#main-menu>ul>li>a img {
+    margin-right: 5px;
 }
+/* Hover Styles */ 
+#main-menu>ul>li>a:hover { 
+    color: #000; 
+    background: var(--second); 
+} 
+/* Sub Menu Styles */ 
+#main-menu>ul>li>ul>li>a {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--black-gray);
+    text-decoration: none; 
+    padding: 5px 10px; 
+} 
+/* Sub Menu Hover Styles */ 
+#main-menu>ul>li>ul>li>a:hover { 
+    color: #000; 
+} 
+
+
+
 
 /* sticky-bottom */
 .sticky-bottom {
