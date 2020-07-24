@@ -30,7 +30,7 @@ $(document).ready(function() {
         slideout.toggle();
     });    
 
-
+    // $('.main-menu').show();
     $('#main-menu-btn, .main-menu').hover(
         function() {
             $('.main-menu').show();
@@ -43,6 +43,18 @@ $(document).ready(function() {
         dots: true,
         arrows: false
     });
+
+    // offcanvas cart view
+    $( ".cart-block" ).click(function() {
+        $('.offcanvas-cart').css('display', 'flex');
+    });
+
+    $( ".offcanvas-cart-header>.close-btn" ).click(function() {
+        $('.offcanvas-cart').css('display', 'none');
+    });    
+
+
+
   
     // Товары которые вы смотрели и покупали
     $('#slider-product-1.card-slider').slick({
@@ -412,3 +424,21 @@ $(document).ready(function() {
     };
 
 });
+
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        const menu = new MmenuLight(
+            document.querySelector( "#mob-catalog-menu" ),
+            "(max-width: 600px)"
+        );
+
+        const navigator = menu.navigation();
+        const drawer = menu.offcanvas();
+
+        document.querySelector( "a[href='#mob-catalog-menu']" )
+            .addEventListener( "click", ( evnt ) => {
+                evnt.preventDefault();
+                drawer.open();
+            });
+    }
+);
