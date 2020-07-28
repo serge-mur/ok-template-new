@@ -406,6 +406,42 @@ $(document).ready(function() {
             arrows: false,
             autoplay: true,
             autoplaySpeed: 2000
+        });
+
+        $('.steps-slider').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: true
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: true
+                    }
+                },
+            ]
         });        
     }
 
@@ -436,6 +472,11 @@ document.addEventListener(
         const drawer = menu.offcanvas();
 
         document.querySelector( "a[href='#mob-catalog-menu']" )
+            .addEventListener( "click", ( evnt ) => {
+                evnt.preventDefault();
+                drawer.open();
+            });
+        document.querySelector( "a[href='#mob-catalog-menu-bottom']" )
             .addEventListener( "click", ( evnt ) => {
                 evnt.preventDefault();
                 drawer.open();
