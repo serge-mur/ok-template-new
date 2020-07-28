@@ -33,8 +33,10 @@ $(document).ready(function() {
     // $('.main-menu').show();
     $('#main-menu-btn, .main-menu').hover(
         function() {
+            // $("body").css("overflow","hidden");
             $('.main-menu').show();
         }, function() {
+            // $("body").css("overflow","auto");
             $('.main-menu').hide();
         }
     );

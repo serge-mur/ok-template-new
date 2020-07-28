@@ -36,6 +36,12 @@ h2 {
     letter-spacing: 0.05em;
     color: #000;
 }
+::placeholder {
+    font-size: 0.875rem;
+    line-height: 135%;
+    color: #000;
+    opacity: 0.4;
+}
 
 /* https://github.com/Mango/slideout */
 
@@ -214,8 +220,15 @@ h2 {
     font-weight: 500;
     text-decoration: none;
 }
-.search-block {
-    /* width: 400px; */
+.search-block .form-control {
+    padding-left: 0;
+    padding-right: 5px;
+}
+.search-block .form-control:focus {
+    /* color: var(--gray); */
+    border-color: var(--border);
+    box-shadow: none; 
+    padding-left: 0;
 }
 .search-block .input-group-text {
     background-color: transparent;
@@ -254,7 +267,7 @@ h2 {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 .5rem;  
+    margin: 0 10px;  
 }
 
 /* header navigation */
@@ -337,6 +350,7 @@ h2 {
 #main-menu {
     width: 1110px;
     overflow: hidden;
+    z-index: 10;
 }    
 #main-menu ul, li { 
     margin: 0 0 0 0; 
@@ -420,9 +434,6 @@ h2 {
     color: #000; 
 } 
 
-
-
-
 /* sticky-bottom */
 .sticky-bottom {
     position: fixed!important;
@@ -496,7 +507,7 @@ h2 {
     color: var(--main);
 }
 .main-slider .slick-dots-wrapper {
-    top: 350px;
+    top: 400px;
     right: calc(50% - 93px);
 }
 
@@ -575,13 +586,16 @@ h2 {
 .content-section {
     background-color: var(--second);    
 }
-.collection-item {
-    /* width: 270px; */
+.collection-item img {
+    border-radius: 10px;
 }
 .card-recipes {
     /* width: 270px; */
     border-color: transparent;
     background-color: transparent;    
+    border-radius: 10px;
+}
+.card-recipes img {
     border-radius: 10px;
 }
 .card-recipes .card-body {
@@ -612,7 +626,10 @@ h2 {
 .card-recipes .card-footer span {
     color: #000;
     font-size: 0.6875rem;
-    padding-right: 1.875rem;
+    white-space: nowrap;
+}
+.card-recipes .card-footer>span:first-child {
+    padding-right: 15px;
 }
 .articles-section .card-recipes {
     width: auto;
@@ -653,6 +670,7 @@ h2 {
 .card-brands .card-title {
     color: var(--black-gray);
     font-size: 0.875rem;
+    line-height: 135%;
     font-weight: bold;
     text-align: center;
 }
@@ -699,6 +717,12 @@ h2 {
     border-radius: 10px;
     position: relative;
 }
+.card-product:hover .buy-block .btn-buy {
+    color: #fff;
+    background-color: var(--light);
+    border-color: var(--light);
+    box-shadow: 0px 3px 0px var(--main);
+} 
 .card-product .percent-badge {
     position: absolute;
     top: 35px;
@@ -780,12 +804,12 @@ h2 {
     border-radius: 100px;
     padding: 10px 20px;
 }
-.card-product .buy-block .btn-buy:hover {
+/* .card-product .buy-block .btn-buy:hover {
     color: #fff;
     background-color: var(--light);
     border-color: var(--light);
     box-shadow: 0px 3px 0px var(--main);
-} 
+}  */
 .card-product .card-footer {
     padding: 5px 10px;
     background-color: transparent;
@@ -1271,7 +1295,7 @@ h2 {
     top: -60px;
     right: 0;
     background-color: var(--second);
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-radius: 100px;
 }
 .slick-dots-wrapper .slick-dots {
