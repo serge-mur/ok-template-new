@@ -30,6 +30,15 @@ $(document).ready(function() {
         slideout.toggle();
     });    
 
+    $('.mobile-searsh-toggle').click(function() {
+        $('.mobile-top-menu').css('display', 'none');
+        $('.mobile-search').css('display', 'flex');
+    });
+    $('.mobile-search .back-link').click(function() {
+        $('.mobile-search').css('display', 'none');        
+        $('.mobile-top-menu').css('display', 'flex');
+    });
+
     // $('.main-menu').show();
     $('#main-menu-btn, .main-menu').hover(
         function() {
@@ -470,7 +479,9 @@ document.addEventListener(
             "(max-width: 600px)"
         );
 
-        const navigator = menu.navigation();
+        const navigator = menu.navigation({
+            title: "Категория товаров"
+        });
         const drawer = menu.offcanvas();
 
         document.querySelector( "a[href='#mob-catalog-menu']" )

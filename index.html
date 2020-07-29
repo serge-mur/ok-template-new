@@ -79,7 +79,21 @@
         <li><a href="#">Замороженные продукты</a></li>
         <li><a href="#">Кондитерские изделия</a></li>
         <li><a href="#">Консервация</a></li>
-        <li><a href="#">Молочные продкуты, сыры, яйца</a></li>
+        <li><span>Молочные продукты, сыры, яйца</span>
+            <ul>
+                <li><a href="#">Азиатская кухня</a></li>
+                <li><a href="#">Кетчуп, майонез, соусы, сиропы</a></li>
+                <li><a href="#">Крупы, хлопья, мюсли, сухие завтраки</a></li>
+                <li><a href="#">Макаронные изделия</a></li>
+                <li><a href="#">Мука, кулинарные ингредиенты</a></li>
+                <li><a href="#">Орехи, сухофрукты, семечки</a></li>
+                <li><a href="#">Продукты быстрого приготовления</a></li>
+                <li><a href="#">Растительные масла</a></li>
+                <li><a href="#">Сахар, соль</a></li>
+                <li><a href="#">Специи, приправы</a></li>
+                <li><a href="#">Чипсы, сухарики, попкорн</a></li>
+            </ul>
+        </li>
         <li><a href="#">Мясо, птица, рыба, гастрономия</a></li>
         <li><a href="#">Овощи, фрукты, зелень</a></li>
         <li><a href="#">Товары для дома</a></li>
@@ -99,11 +113,22 @@
             <div class="mobile-line">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 d-flex align-items-center justify-content-between py-2">
-                            <a href="/"><img src="img/mob_logo.png" alt=""></a>
-                            <a href="#"><img src="img/search_ico.png" alt=""></a>
-                            <a href="#"><img src="img/mob_cart.png" alt=""></a>
-                            <a class="toggle-button" href="#"><img src="img/burger.png" alt=""></a>
+                        <div class="col-12">
+                            <div class="mobile-top-menu py-2">
+                                <a href="/"><img src="img/mob_logo.png" alt=""></a>
+                                <a href="#" class="mobile-searsh-toggle"><img src="img/search_ico.png" alt=""></a>
+                                <a href="#"><img src="img/mob_cart.png" alt=""></a>
+                                <a class="toggle-button" href="#"><img src="img/burger.png" alt=""></a>                                
+                            </div>
+                            <div class="mobile-search py-2">
+                                <a href="#" class="back-link"><img src="img/mob_arrow_left.png" alt=""></a>  
+                                <div class="input-group flex-nowrap">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><img src="img/search_ico.png" alt=""></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Поиск...">
+                                </div>                           
+                            </div>                            
                         </div>
                     </div>
                 </div>
