@@ -165,35 +165,35 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="sidebar-filters-block">
-                        <h3>Фильтры</h3>
+                        <h3 class="title">Фильтры</h3>
 
-                        <div class="filter-0">
-                            <a class="d-block" data-toggle="collapse" href="#collapse0">
+                        <div class="filter-block">
+                            <a class="filter-name" data-toggle="collapse" href="#collapse0">
                                 Цена за штуку
                             </a>
                             <div class="collapse show" id="collapse0">
                                 <div class="form-row">
                                     <div class="col">
-                                        <input type="text" class="form-control" id="range-min" placeholder="От 0" value="">
+                                        <input type="text" class="form-control fill" id="range-min" placeholder="От 0" value="">
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="form-control" id="range-max" placeholder="До 0" value="">
+                                        <input type="text" class="form-control fill" id="range-max" placeholder="До 0" value="">
                                     </div>
                                 </div>
                             </div>                              
                         </div>
 
-                        <div class="filter-1">
-                            <a class="d-block" data-toggle="collapse" href="#collapse1">
+                        <div class="filter-block">
+                            <a class="filter-name" data-toggle="collapse" href="#collapse1">
                                 Поставщики
                             </a>
                             <div class="collapse show" id="collapse1">
-                                <p>Разные товары везут разные поставщики и у каждого есть минимальный заказ.</p>
+                                <p class="warning-text">Разные товары везут разные поставщики и у каждого есть минимальный заказ.</p>
                             </div>                            
                         </div>
 
-                        <div class="filter-2">
-                            <a class="d-block" data-toggle="collapse" href="#collapse2">
+                        <div class="filter-block">
+                            <a class="filter-name" data-toggle="collapse" href="#collapse2">
                                 Количество товаров в упаковке
                             </a>
                             <div class="collapse show" id="collapse2">
@@ -212,8 +212,8 @@
                             </div>                            
                         </div>
 
-                        <div class="filter-3">
-                            <a class="d-block" data-toggle="collapse" href="#collapse3">
+                        <div class="filter-block">
+                            <a class="filter-name" data-toggle="collapse" href="#collapse3">
                                 Бренды
                             </a>
                             <div class="collapse show" id="collapse3">
@@ -224,17 +224,17 @@
                                 </div>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck32">
-                                    <label class="custom-control-label" for="customCheck32">Чайкофский Mon Café (6)</label>
+                                    <label class="custom-control-label" for="customCheck32">Белочка (2)</label>
                                 </div>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck33">
-                                    <label class="custom-control-label" for="customCheck33">Чайкофский Mon Café (6)</label>
+                                    <label class="custom-control-label" for="customCheck33">Big Bon (22)</label>
                                 </div>
                             </div>                            
                         </div>
 
-                        <div class="filter-4">
-                            <a class="d-block" data-toggle="collapse" href="#collapse4">
+                        <div class="filter-block border-bottom-0">
+                            <a class="filter-name" data-toggle="collapse" href="#collapse4">
                                 Не содержит
                             </a>
                             <div class="collapse show" id="collapse4">
@@ -253,7 +253,7 @@
                             </div>                            
                         </div>
 
-                        <a class="d-block" href="#">Сбросить весь фильтр</a>
+                        <a class="filter-reset" href="#">Сбросить весь фильтр</a>
 
                     </div>
                 </div>
@@ -261,12 +261,12 @@
                     
                     <div class="row">
                         <div class="col-12">
-                            <h2>Вода, напитки, соки</h2>
+                            <h2 class="mb-4">Вода, напитки, соки</h2>
                             <a class="d-block" href="#">
                                 <img class="img-fluid" src="img/cat_top_banner.jpg" alt="">
                             </a>
-                            <div class="tags-block">
-                                <a href="#" class="tag-item">Все</a>
+                            <div class="tags-block my-4">
+                                <a href="#" class="tag-item active">Все</a>
                                 <a href="#" class="tag-item">Вода</a>
                                 <a href="#" class="tag-item">Напитки</a>
                             </div>
@@ -274,7 +274,7 @@
                     </div>
 
                     <div class="card-filters-block">
-                        <div class="row">
+                        <div class="row align-items-center my-3">
                             <div class="col-4">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitch1">
@@ -378,22 +378,25 @@
                     <div class="row">
                         <div class="col-12">
                             <nav aria-label="Page navigation">
-                                <ul class="pagination">
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                      <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                  </li>
-                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                  <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                      <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                  </li>
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true"><img src="img/slider-arrow-left.png" alt=""></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true"><img src="img/slider-arrow-right.png" alt=""></span>
+                                        </a>
+                                    </li>
                                 </ul>
-                              </nav>
+                            </nav>
                         </div>
                     </div>
 
@@ -406,14 +409,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <a class="d-block" href="#">
+                    <a class="d-block my-4" href="#">
                         <img class="img-fluid" src="img/cat_bottom_banner.jpg" alt="">
                     </a>
                 </div>
             </div>            
         </div>
 
-        <div class="article-block">
+        <div class="article-block my-4">
             <div class="container">
                 <div class="row">
                     <div class="col-6">

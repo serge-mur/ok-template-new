@@ -1143,6 +1143,44 @@ h2 {
     text-transform: unset;
 }
 
+/* form styles elements */
+.custom-checkbox {
+    margin-bottom: 10px;
+}
+.custom-checkbox .custom-control-label {
+    color: var(--black-gray);
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.custom-checkbox .custom-control-label::before {
+    top: 0;
+    left: -24px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: var(--border) solid 1px;
+}
+.custom-checkbox .custom-control-label::after {
+    top: 0;
+    left: -24px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background: no-repeat 75% / 75% 75%;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: var(--border);
+    background-color: transparent;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: url(../img/checkbox_ico.svg);
+}
+
+
+
 /* counters */
 .counter {
     display: inline-flex;
@@ -1521,9 +1559,55 @@ section h2 {
 
 }
 
-/* init */
-#tab-2-brands {
-    display: none;
+/* ******************* */
+/* nav elements styles */
+/* ******************* */
+
+/* breadcrumb */
+
+.breadcrumb {
+    background-color: transparent;
+    padding-left: 0;
+}
+.breadcrumb-item a {
+    color: #000;    
+    font-size: 0.6875rem;  
+    text-decoration: none;
+}
+.breadcrumb-item.active {
+    color: #000;    
+    font-size: 0.6875rem;  
+    font-weight: bold;
+    text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #000;
+    content: ">>";
+}
+
+/* pagination */
+
+.page-link {
+    color: var(--gray);
+    border: transparent;
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 10px;
+}
+.page-link:hover {
+    color: var(--main);
+    background-color: transparent;
+    border-color: transparent;
+}
+.page-item.active .page-link {
+    color: var(--main);
+    background-color: transparent;
+    border-color: transparent;
+}
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 
 
@@ -1551,4 +1635,92 @@ section h2 {
     content: url(../img/menu_arrow.png);
     vertical-align: middle;
     margin-left: 5px;
+}
+
+/* ******************** */
+/* category page styles */
+/* ******************** */
+
+/* sidebar filters */
+.sidebar-filters-block .title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+.sidebar-filters-block .filter-block {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+.sidebar-filters-block .filter-block .form-control {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.sidebar-filters-block .filter-block .form-control.fill {
+    border-color: transparent;
+    background-color: var(--second);
+}
+.sidebar-filters-block .filter-name[data-toggle='collapse'] {
+    display: block;
+    color: var(--gray);
+    font-size: 1rem;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+.sidebar-filters-block .filter-name[data-toggle='collapse']:after {
+    display: inline-block;
+    content: '';
+    width: 9px;
+    height: 8px;
+    padding-left: 5px;
+    background: url(../img/collapse_up.png);
+}
+.sidebar-filters-block .filter-name[data-toggle='collapse'].collapsed:after {
+    background: url(../img/collapse_down.png);
+}
+.sidebar-filters-block .warning-text {
+    color: var(--red);
+    font-size: 0.6875rem;
+    margin-bottom: 0;
+}
+.sidebar-filters-block .filter-reset {
+    display: block;
+    color: var(--link);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* main block */
+
+.tags-block .tag-item {
+    color: var(--black-gray);
+    border: 1px solid var(--main);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.tags-block .tag-item:hover,
+.tags-block .tag-item.active {
+    color: #fff;
+    background-color: var(--main);
+}
+.card-filters-block .custom-select {
+    border-radius: 10px;
+    background: #fff url(../img/select_ico.png) no-repeat right 0.75rem center/10px 7px;
+}
+.article-block {
+    background-color: var(--second);
+    padding: 40px 0;
+}
+.article-block .text-block h2 {
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+}
+.article-block .text-block p {
+    color: var(--black-gray);
+    font-size: 1rem;
+    font-weight: 500;
 }
