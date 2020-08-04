@@ -182,6 +182,17 @@ h2 {
     /* color: var(--black-gray); */
     background: #fff;
 }
+.mm-spn li a.btn-menu {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: var(--second);
+    border-radius: 100px;
+    padding: 5px 10px;
+    margin: 20px 10px
+}
 .mm-spn li:before {
     background: url(../img/bi_arrow-right-short.png);
     width: 32px;
@@ -380,6 +391,7 @@ h2 {
     width: 1110px;
     overflow: hidden;
     z-index: 10;
+    border-color: transparent;
 }    
 #main-menu ul, li { 
     margin: 0 0 0 0; 
@@ -397,7 +409,7 @@ h2 {
 #main-menu>ul>li>ul { 
     position: absolute; 
     left: 299px; /*Set 1px less than menu width */ 
-    top: -68px;
+    top: -60px;
     width: calc(1110px - 300px);
     height: calc(100% + 68px);
     display: block; 
@@ -417,11 +429,10 @@ h2 {
 #main-menu>ul>li>ul>li { 
     display: inline-block; 
 } 
-#main-menu>ul>li:hover>ul {
-    display: block; 
-} 
-#main-menu>ul>li:hover>ul { 
-    visibility: visible; 
+#main-menu>ul>li:hover>ul,
+#main-menu>ul>li.active>ul {
+    display: block;
+    visibility: visible;      
 } 
 #main-menu>ul ul {
     visibility: hidden; 
@@ -442,7 +453,8 @@ h2 {
     margin-right: 5px;
 }
 /* Hover Styles */ 
-#main-menu>ul>li>a:hover { 
+#main-menu>ul>li>a:hover,
+#main-menu>ul>li.active>a { 
     color: #000; 
     background: var(--second); 
 } 
@@ -462,6 +474,22 @@ h2 {
 #main-menu>ul>li>ul>li>a:hover { 
     color: #000; 
 } 
+
+.header:after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 190px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+}
+.header.overlay:after {
+    display: block;
+}
+
 
 /* sticky-bottom */
 .sticky-bottom {
@@ -831,7 +859,8 @@ h2 {
     background-color: var(--main);
     border-color: var(--main);
     border-radius: 100px;
-    padding: 10px 20px;
+    padding: 7px 20px;
+    letter-spacing: 0.05em;
 }
 /* .card-product .buy-block .btn-buy:hover {
     color: #fff;
@@ -908,7 +937,7 @@ h2 {
 .card-product.add-card .card-header {
     background-color: var(--second);
     color: #000;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
     padding: 10px 0;
     text-align: center;
@@ -1322,18 +1351,18 @@ h2 {
 }
 
 .slick-dots li button {
-    border: 0;
+    border: none;
     background-color: var(--gray);
     opacity: .3;
     display: inline-block;
     vertical-align: middle;
-    height: 12px;
-    width: 12px;
+    height: 8px;
+    width: 8px;
     outline: none;
     line-height: 0px;
     font-size: 0px;
     color: transparent;
-    padding: 5px;
+    padding: 4px;
     cursor: pointer;
     border-radius: 100px;
 }
@@ -1468,8 +1497,14 @@ section h2 {
     .card-product .buy-block .btn-buy {
         color: #fff;
         font-size: 0.875rem;
-        padding: 10px 12px;
+        padding: 6px 12px;
     }
+    .card-product:hover .buy-block .btn-buy {
+        color: #fff;
+        background-color: var(--main);
+        border-color: var(--main);
+        box-shadow: none;
+    } 
     .card-product.in-card .card-header {
         padding-left: 10px;
         padding-right: 10px;
