@@ -75,7 +75,26 @@ $(document).ready(function() {
     });    
 
 
+    $( ".toggle-filters" ).click(function() {
+        $('#category-sidebar').css('display', 'block');
+        // $('.category-main-block').css('display', 'none');
+    });  
+    
 
+    // slider in card detail
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        focusOnSelect: true
+    });
   
     // Товары которые вы смотрели и покупали
     $('#slider-product-1.card-slider').slick({

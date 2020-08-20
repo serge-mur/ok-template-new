@@ -36,6 +36,12 @@ h2 {
     letter-spacing: 0.05em;
     color: #000;
 }
+h2>span {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: normal;
+}
 ::placeholder {
     font-size: 0.875rem;
     line-height: 135%;
@@ -1491,6 +1497,15 @@ section h2 {
     .card-product .card-title {
         font-size: 0.875rem;
     }
+    .card-product .buy-block {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .slick-slide .card-product .buy-block {
+        justify-content: space-between;
+    }
     .card-product .buy-block .price {
         font-size: 1.25rem;
     }
@@ -1726,6 +1741,19 @@ section h2 {
 }
 
 /* main block */
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: #000;
+}
+
+.title>span {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: normal;
+}
 
 .tags-block .tag-item {
     color: var(--black-gray);
@@ -1746,6 +1774,11 @@ section h2 {
     border-radius: 10px;
     background: #fff url(../img/select_ico.png) no-repeat right 0.75rem center/10px 7px;
 }
+
+.product-grid>div {
+    margin-bottom: 1rem;
+}
+
 .article-block {
     background-color: var(--second);
     padding: 40px 0;
@@ -1759,3 +1792,43 @@ section h2 {
     font-size: 1rem;
     font-weight: 500;
 }
+
+@media (max-width: 575px) {
+    .title {
+        font-size: 1.25rem;
+    }
+    .title>span {
+        font-size: 0.875rem;
+    }
+    #category-sidebar {
+        display: none;
+    }
+    .product-grid {
+        border-top: 1px solid var(--border);
+    }
+    .product-grid>div {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .product-grid .card-product {
+        min-width: 128px;
+        border-radius: 0;
+        border-top-color: transparent;
+    }
+    .product-grid>div:nth-child(even) .card-product {
+        border-right-color: transparent;
+    }
+    .product-grid>div:nth-child(odd) .card-product {
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+
+    .article-block .text-block h2 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* ****************** */
+/* detail page styles */
+/* ****************** */

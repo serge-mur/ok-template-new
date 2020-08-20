@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cart-progress1,
+    .cart-progress2,
+    .cart-progress3 {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid gray;
+        /* background: url(test.png), linear-gradient(white 50%, red 50%); */
+    }
+</style>
+<body>
+    <a href="#" data-progress="10" data-color="green" class="cart-progress1"></a>
+    <a href="#" data-progress="50" data-color="red" class="cart-progress2"></a>
+    <a href="#" data-progress="90" data-color="blue" class="cart-progress3"></a>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
+<script>
+$( document ).ready(function() {
+
+    cartProgress('.cart-progress1');
+    cartProgress('.cart-progress2');
+    cartProgress('.cart-progress3');
+
+    function cartProgress(element) {
+        let progress = $(element).data('progress'), color = $(element).data('color');
+        $(element).css('background', 'url(test.png), linear-gradient(white '+ (100-progress) +'%, '+ color +' '+ (100-progress) +'%)');
+    }
+
+
+});
+</script>
+
+</body>
+</html>
