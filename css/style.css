@@ -1832,3 +1832,293 @@ section h2 {
 /* ****************** */
 /* detail page styles */
 /* ****************** */
+h1.title {
+    margin-bottom: 10px;
+}
+.detail-line {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+}
+.detail-line .rating-sm a {
+    color: var(--link);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+.detail-line .btn {
+    color: var(--link);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+.detail-line .this-buy {
+    color: #000;
+    font-size: 0.875rem;
+}
+.rating {
+    display: flex;
+    align-items: center;
+}
+.rating .stars span {
+    display: inline-block;
+    width: 32px;
+    height: 29px;
+    background: url(../img/star.png);
+}
+.rating .stars span.star-gray {
+    display: inline-block;
+    width: 32px;
+    height: 29px;
+    background: url(../img/star_gray.png);
+}
+.slider-nav {
+    padding: 40px 30px;
+}
+.slider-nav .slick-prev, .slick-next {
+    width: 26px;
+    height: 16px;
+}
+.slider-nav .slick-next {
+    background: url(../img/slider-arrow-right.png);
+    right: 0;
+}
+.slider-nav .slick-prev {
+    background: url(../img/slider-arrow-left.png);
+    right: 0;
+    z-index: 1;
+}
+
+.detail-middle-block .availability {
+    margin-bottom: 20px;
+}
+.detail-middle-block .availability>div {
+    color: var(--green);
+}
+.detail-middle-block .no-availability>div {
+    color: var(--red);
+}
+
+.package-choice-block .package-title {
+    color: #000;
+    font-size: 1rem; 
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.package-choice-block .package-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 10px;
+    min-width: 90px;
+}
+.package-choice-block .package-item.active,
+.package-choice-block .package-item:hover {
+    background-color: var(--second);
+    border: 2px solid var(--main);
+    cursor: pointer;
+}
+.package-choice-block .package-item>div {
+    color: #000;
+    font-size: 0.875rem; 
+}
+.package-choice-block .package-item .price {
+    font-weight: bold;
+}
+
+.detail-middle-block .sold-in {
+    color: var(--gray);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    margin: 10px 0 40px 0; 
+}
+.detail-middle-block .specifications-table {
+    color: var(--gray);
+    font-size: 0.875rem;
+    margin-bottom: 40px;
+}
+.detail-middle-block .specifications-table tr td {
+    padding-bottom: 20px;
+}
+.detail-middle-block .specifications-table tr td:first-child {
+    padding-right: 30px;
+}
+.detail-middle-block .specifications-table tr td:last-child {
+    color: var(--black-gray);
+    font-weight: bold;
+}
+
+.detail-buy-block {
+    background-color: var(--second);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+}
+.detail-buy-block .price-block .price {
+    color: var(--main);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: -10px;    
+}
+.detail-buy-block .price-block .old-price {
+    color: var(--gray);
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-decoration-line: line-through;
+
+}
+.detail-buy-block .price-per-package-block {
+    margin: 20px 0;
+}
+.detail-buy-block .price-per-package-block div {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+.detail-buy-block .counter-block {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.detail-buy-block .btn {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-buy-block .seller-link-block {
+    display: flex;
+    font-size: 0.875rem;
+}
+.detail-buy-block .seller-link-block span {
+    color: var(--gray);
+}
+.detail-buy-block .seller-link-block a {
+    
+}
+
+.utp-block>div {
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.utp-block>div>img {
+    margin-right: .5rem;
+}
+
+.all-sellers .title,
+.description-product-section .title,
+.reviews-section .title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 135%;
+    letter-spacing: 0.05em;
+}
+
+.all-sellers {
+
+}
+
+.description-product-section h3 {
+    color: var(--main);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.description-product-section .composition-block .composition-item {
+    display: inline-block;
+    text-align: center;
+}
+.description-product-section .composition-block .composition-item .dig {
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.description-product-section .composition-block .composition-item .name {
+    color: var(--main);
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.description-product-section .text-block {
+    color: #000;
+    font-size: 0.875rem;
+    line-height: 135%;
+}
+.description-product-section .how-to-make-order {
+    display: flex;
+}
+.description-product-section .how-to-make-order .title {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.reviews-section .reviews-block .review-item {
+    margin-bottom: 40px;
+}
+.reviews-section .reviews-block .review-item .name {
+    color: #000;
+    font-size: 0.875rem;
+}
+.reviews-section .reviews-block .review-item .date {
+    color: #000;
+    font-size: 0.875rem;
+}
+.reviews-section .reviews-block .review-item .message {
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 145%;
+}
+.rating-sm {
+    display: flex;
+    align-items: center;
+}
+.rating-sm .stars span {
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background: url(../img/star_sm.png);
+}
+.rating-sm .stars span.star-gray {
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background: url(../img/star_gray_sm.png);
+}
+
+.other-products-section .nav-tabs {
+    border-bottom: 1px solid var(--border);
+}
+.other-products-section .nav-tabs .nav-item {
+    margin-right: 15px;
+}
+.other-products-section .nav-tabs .nav-link {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--second);
+    color: var(--black-gray);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+}
+.other-products-section .nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--main);
+    background-color: #fff;
+    border-color: var(--border) var(--border) #fff;
+}
+.other-products-section .tab-content {
+    border: 1px solid var(--border);
+    border-top: none;
+    border-bottom-left-radius : 10px;
+    border-bottom-right-radius : 10px;
+    padding: 30px 0;
+}
