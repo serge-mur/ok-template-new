@@ -28,14 +28,14 @@ $(document).ready(function() {
 
     document.querySelector('.toggle-button').addEventListener('click', function() {
         slideout.toggle();
-    });    
+    });
 
     $('.mobile-searsh-toggle').click(function() {
         $('.mobile-top-menu').css('display', 'none');
         $('.mobile-search').css('display', 'flex');
     });
     $('.mobile-search .back-link').click(function() {
-        $('.mobile-search').css('display', 'none');        
+        $('.mobile-search').css('display', 'none');
         $('.mobile-top-menu').css('display', 'flex');
     });
 
@@ -47,7 +47,8 @@ $(document).ready(function() {
             $('.header').addClass('overlay');
             $('.main-menu>ul>li:first-child').addClass('active');
             $('.main-menu').show();
-        }, function() {
+        },
+        function() {
             // $("body").css("overflow","auto");
             enableScroll()
             $('.header').removeClass('overlay');
@@ -66,20 +67,20 @@ $(document).ready(function() {
     });
 
     // offcanvas cart view
-    $( ".cart-block" ).click(function() {
+    $(".cart-block").click(function() {
         $('.offcanvas-cart').css('display', 'flex');
     });
 
-    $( ".offcanvas-cart-header>.close-btn" ).click(function() {
+    $(".offcanvas-cart-header>.close-btn").click(function() {
         $('.offcanvas-cart').css('display', 'none');
-    });    
+    });
 
 
-    $( ".toggle-filters" ).click(function() {
+    $(".toggle-filters").click(function() {
         $('#category-sidebar').css('display', 'block');
         // $('.category-main-block').css('display', 'none');
-    });  
-    
+    });
+
 
     // slider in card detail
     $('.slider-for').slick({
@@ -95,7 +96,7 @@ $(document).ready(function() {
         asNavFor: '.slider-for',
         focusOnSelect: true
     });
-  
+
     // Товары которые вы смотрели и покупали
     $('#slider-product-1.card-slider').slick({
         infinite: false,
@@ -104,13 +105,13 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -139,13 +140,13 @@ $(document).ready(function() {
         slidesToScroll: 4,
         dots: true,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -177,13 +178,13 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -214,13 +215,13 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -251,13 +252,13 @@ $(document).ready(function() {
         arrows: false,
         dots: true,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -288,13 +289,13 @@ $(document).ready(function() {
         arrows: false,
         dots: true,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -325,13 +326,13 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -362,13 +363,13 @@ $(document).ready(function() {
         dots: true,
         arrows: false,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -399,13 +400,86 @@ $(document).ready(function() {
         arrows: false,
         dots: true,
         responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+        ]
+    });
+
+    // Карточка товара
+    $('#slider-product-detail-1').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+        ]
+    });
+
+    $('#slider-product-detail-2').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
             },
             {
                 breakpoint: 768,
@@ -437,6 +511,9 @@ $(document).ready(function() {
         setArrows('.recipes-slider');
         setArrows('#slider-product-4.card-slider');
         setArrows('#slider-product-5.card-slider');
+        setArrows('#slider-product-detail-1.card-slider');
+        setArrows('#slider-product-detail-2.card-slider');
+        setArrows('#slider-product-5.card-slider');
         setArrows('.article-slider');
     }
 
@@ -455,13 +532,13 @@ $(document).ready(function() {
             arrows: false,
             dots: true,
             responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
-                }
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        variableWidth: true
+                    }
                 },
                 {
                     breakpoint: 768,
@@ -482,19 +559,19 @@ $(document).ready(function() {
                     }
                 },
             ]
-        });        
+        });
     }
 
 
 
     function setArrows(selector) {
-        $(selector+" .slick-dots").wrap("<div class='slick-dots-wrapper'></div>");
-        $(selector+" .slick-dots-wrapper").prepend('<span class="slick-dots-prev"></span>');
-        $(selector+" .slick-dots-wrapper").append('<span class="slick-dots-next"></span>');
-        $(selector+' .slick-dots-prev').on('click', function(){
+        $(selector + " .slick-dots").wrap("<div class='slick-dots-wrapper'></div>");
+        $(selector + " .slick-dots-wrapper").prepend('<span class="slick-dots-prev"></span>');
+        $(selector + " .slick-dots-wrapper").append('<span class="slick-dots-next"></span>');
+        $(selector + ' .slick-dots-prev').on('click', function() {
             $(selector).slick('slickPrev');
         });
-        $(selector+' .slick-dots-next').on('click', function(){
+        $(selector + ' .slick-dots-next').on('click', function() {
             $(selector).slick('slickNext');
         });
     };
@@ -504,7 +581,7 @@ $(document).ready(function() {
 document.addEventListener(
     "DOMContentLoaded", () => {
         const menu = new MmenuLight(
-            document.querySelector( "#mob-catalog-menu" ),
+            document.querySelector("#mob-catalog-menu"),
             "(max-width: 600px)"
         );
 
@@ -513,13 +590,13 @@ document.addEventListener(
         });
         const drawer = menu.offcanvas();
 
-        document.querySelector( "a[href='#mob-catalog-menu']" )
-            .addEventListener( "click", ( evnt ) => {
+        document.querySelector("a[href='#mob-catalog-menu']")
+            .addEventListener("click", (evnt) => {
                 evnt.preventDefault();
                 drawer.open();
             });
-        document.querySelector( "a[href='#mob-catalog-menu-bottom']" )
-            .addEventListener( "click", ( evnt ) => {
+        document.querySelector("a[href='#mob-catalog-menu-bottom']")
+            .addEventListener("click", (evnt) => {
                 evnt.preventDefault();
                 drawer.open();
             });
@@ -528,42 +605,42 @@ document.addEventListener(
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
 function preventDefault(e) {
-  e.preventDefault();
+    e.preventDefault();
 }
 
 function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
 }
 
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+        get: function() { supportsPassive = true; }
+    }));
+} catch (e) {}
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
 // call this to Disable
 function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
 // call this to Enable
 function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+    window.removeEventListener('touchmove', preventDefault, wheelOpt);
+    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
