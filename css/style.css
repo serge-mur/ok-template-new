@@ -2166,12 +2166,25 @@ h1.title {
     margin-bottom: 20px;
 }
 
-.detail-middle-block .availability>div {
+.detail-middle-block .availability .status {
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--green);
 }
 
-.detail-middle-block .no-availability>div {
+.detail-middle-block .no-availability .status {
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--red);
+}
+.detail-middle-block .no-availability .text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+.detail-middle-block .no-availability .form-control {
+    margin-bottom: 10px;
 }
 
 .package-choice-block .package-title {
@@ -2192,7 +2205,7 @@ h1.title {
     min-width: 90px;
 }
 
-.package-choice-block .package-item.active,
+.package-choice-block .package-item.selected,
 .package-choice-block .package-item:hover {
     background-color: var(--second);
     border: 2px solid var(--main);

@@ -644,3 +644,42 @@ function enableScroll() {
     window.removeEventListener('touchmove', preventDefault, wheelOpt);
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
+
+// detail
+$('.radio-group .radio:first-child').addClass('selected');
+setCounter(1);
+
+$('.radio-group .radio').click(function() {
+    if (!$(this).hasClass("disabled")) {
+        $(this).parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
+        var val = $(this).attr('data-value');
+        $(this).parent().find('input').val(val); 
+        
+        setCounter(parseInt(val));
+    }
+
+});
+
+function setCounter(step) {
+    var quantity = step;
+    $('.counter .count').val(quantity);
+    $('.counter .count').attr('data-step', quantity);
+}
+
+$('.counter .quantity-plus').click(function(e){
+    var step = parseInt($('.counter .count').attr('data-step'));
+    var quantity = parseInt($('.counter .count').val());
+        $('.counter .count').val(quantity + step);  
+});
+
+$('.counter .quantity-minus').click(function(e){
+    var step = parseInt($('.counter .count').attr('data-step'));
+    var quantity = parseInt($('.counter .count').val());
+        if(quantity>step){
+            $('.counter .count').val(quantity - step);
+        } else {
+            $('.buy-step-2').hide();
+            $('.buy-step-1').show();
+        }
+});
