@@ -76,11 +76,12 @@ $(document).ready(function() {
     });
 
 
-    $(".toggle-filters").click(function() {
-        $('#category-sidebar').css('display', 'block');
-        // $('.category-main-block').css('display', 'none');
-    });
+    // $(".toggle-filters").click(function() {
+    //     $('#category-sidebar').css('display', 'block');
+    //     // $('.category-main-block').css('display', 'none');
+    // });
 
+    toggleSidebar();
 
     // slider in card detail
     $('.slider-for').slick({
@@ -560,9 +561,17 @@ $(document).ready(function() {
                 },
             ]
         });
+
     }
 
-
+    function toggleSidebar() {
+        var w = $(window).width();
+        if (w <= 991) {
+            $('#sidebar-filters-block').removeClass('show');
+        } else {
+            $('#sidebar-filters-block').addClass('show');
+        }
+    }
 
     function setArrows(selector) {
         $(selector + " .slick-dots").wrap("<div class='slick-dots-wrapper'></div>");
