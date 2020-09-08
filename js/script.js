@@ -514,7 +514,6 @@ $(document).ready(function() {
         setArrows('#slider-product-5.card-slider');
         setArrows('#slider-product-detail-1.card-slider');
         setArrows('#slider-product-detail-2.card-slider');
-        setArrows('#slider-product-5.card-slider');
         setArrows('.article-slider');
     }
 
