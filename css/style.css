@@ -260,11 +260,7 @@ h2>span {
 
 
 /* ************* */
-
-
 /* header styles */
-
-
 /* ************* */
 
 .header {
@@ -354,15 +350,133 @@ h2>span {
     background-color: var(--second);
 }
 
-.cart-block a {
+.cart-block .cart-item {
+    position: relative;
     display: inline-block;
     text-align: center;
+    margin: 0 10px;
+}
+.cart-block .cart-item>.total-price {
     font-size: 0.875rem;
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 10px;
 }
+
+/* add card message */
+.add-cart-message {
+    position: absolute;
+    top: 140px;
+    right: 180px;
+    width: 385px;
+    z-index: 1;
+}
+
+.add-cart-message.arrow-top {
+    margin-top: 40px;
+}
+.add-cart-message.arrow-top:after {
+    content: " ";
+    position: absolute;
+    right: 30px;
+    top: -15px;
+    border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid var(--main);
+}
+
+@media (max-width: 575px) {
+    .add-cart-message {
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 0;
+        z-index: 1;
+    }    
+}
+
+.add-cart-message .add-cart-message-header {
+    background-color: var(--main);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.add-cart-message .add-cart-message-header .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url(../img/close_white.png);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.add-cart-message .add-cart-message-body {
+    background-color: #fff;
+    color: #000;
+    font-size: 0.875rem;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.add-cart-message .add-cart-message-body .product-add-item {
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+}
+.add-cart-message .add-cart-message-body .product-add-item .name {
+    color: #000;
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.add-cart-message .add-cart-message-body .product-add-item .price {
+    color: var(--main);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block {
+    text-align: left;
+    padding: 10px 0;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .progress-block  {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .progress {
+    width: 100%;
+    height: 5px;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .progress .progress-bar {
+    background-color: var(--red);
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .progress-price  {
+    width: 80px;
+    text-align: right;
+    color: var(--gray);
+    font-size: 0.6875rem;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .seller-link {
+    font-size: 0.875rem;
+}
+.add-cart-message .add-cart-message-body .seller-progress-block .min-order-message {
+    font-size: 0.6875rem;
+}
+
+
+
 .cart-block .more-cart {
     position: absolute;
     right: -30px;
@@ -379,8 +493,29 @@ h2>span {
 }
 
 
-/* header navigation */
+/* city choice modal */
+#city-choice .city-list {
+    padding: 0;
+    list-style: none;
+    column-count: 3;
+}
+#city-choice .city-list li a {
+    display: inline-block;
+    color: var(--main);
+    font-size: 0.875rem;
+    line-height: 135%;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+#city-choice .more {
+    display: inline-block;
+    color: var(--link);
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 135%;
+}
 
+/* header navigation */
 .header-nav>.btn-group>.btn {
     color: #fff;
     font-size: 1rem;
@@ -629,11 +764,7 @@ li {
 
 
 /* ************* */
-
-
 /* footer styles */
-
-
 /* ************* */
 
 .footer .footer-top .nav-link {
@@ -664,11 +795,7 @@ li {
 
 
 /* **************** */
-
-
 /* main page styles */
-
-
 /* **************** */
 
 .main-slider .slider-content .title {
@@ -937,11 +1064,7 @@ li {
 
 
 /* **************** */
-
-
 /* mini card styles */
-
-
 /* **************** */
 
 
@@ -1174,11 +1297,7 @@ li {
 
 
 /* ********************* */
-
-
 /* offcanvas-cart styles */
-
-
 /* ********************* */
 
 .offcanvas-cart {
@@ -1243,6 +1362,24 @@ li {
     color: var(--yellow);
 }
 
+.offcanvas-cart .provider-item .progress-block  {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.offcanvas-cart .provider-item .progress {
+    width: 100%;
+    height: 5px;
+}
+.offcanvas-cart .provider-item .progress .progress-bar {
+    background-color: var(--red);
+}
+.offcanvas-cart .provider-item .progress-price {
+    width: 80px;
+    text-align: right;
+    color: var(--gray);
+    font-size: 0.6875rem;
+}
 .offcanvas-cart .offcanvas-cart-body .provider-link {
     font-size: 0.875rem;
     font-weight: bold;
@@ -1307,6 +1444,8 @@ li {
 }
 
 .offcanvas-cart .offcanvas-cart-footer .footer-total {
+    color: #fff;
+    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -1453,25 +1592,62 @@ li {
     background-image: url(../img/checkbox_ico.svg);
 }
 
+/* tooltip */
+.tooltip {
+    background-color: #fff;
+    border: 1px solid rgba(124, 124, 124, 0.4);
+    border-radius: 10px;
+    padding: 5px;    
+}
+.tooltip .arrow {
+    display: none;
+}
+.tooltip .tooltip-inner {
+    background-color: #fff;    
+    color: #000;
+    font-size: 0.6875rem; 
+    line-height: 135%; 
+}
+.tooltip.show {
+    opacity: 1;
+}
+
+/* modal */
+.modal-header {
+    border-bottom: 1px solid transparent;
+}
+.modal-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: #000;
+}
+.modal-content {
+    border-radius: 10px;
+}
+
+
+
+
 
 /* counters */
-
 .counter {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--main);
+    border: 1px solid var(--border);
     border-radius: 100px;
     overflow: hidden;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
 .counter .quantity-minus,
 .counter .quantity-plus {
-    background-color: var(--main);
-    color: #fff;
-    font-size: 1.25rem;
+    color: #000;
     font-weight: bold;
-    padding: 5px 15px;
-    border: 1px solid transparent;
+    padding: 4px 20px;
+    border: none;
+    background-color: #fff;
 }
 
 .counter .quantity-minus.active,
@@ -1487,29 +1663,28 @@ li {
 .counter .quantity-plus {}
 
 .counter .count {
-    width: 50px;
+    width: 48px;
     text-align: center;
 }
 
 
 /* sm */
-
 .counter-sm {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--main);
+    border: 1px solid var(--border);
     border-radius: 100px;
     overflow: hidden;
+    font-size: 0.875rem;
 }
 
 .counter-sm .quantity-minus,
 .counter-sm .quantity-plus {
-    background-color: var(--main);
-    color: #fff;
-    font-size: 1.25rem;
+    color: #000;
     font-weight: bold;
-    padding: 0 10px;
-    border: 1px solid transparent;
+    padding: 4px 10px;
+    border: none;
+    background-color: #fff;
 }
 
 .counter-sm .quantity-minus.active,
@@ -1864,11 +2039,7 @@ section h2 {
 
 
 /* ******************* */
-
-
 /* nav elements styles */
-
-
 /* ******************* */
 
 
@@ -1928,11 +2099,7 @@ section h2 {
 
 
 /* ****************** */
-
-
 /* brands page styles */
-
-
 /* ****************** */
 
 .filter-nav-block h3 {
@@ -1962,11 +2129,7 @@ section h2 {
 
 
 /* ******************** */
-
-
 /* category page styles */
-
-
 /* ******************** */
 
 
@@ -2123,11 +2286,7 @@ section h2 {
 
 
 /* ****************** */
-
-
 /* detail page styles */
-
-
 /* ****************** */
 
 h1.title {
@@ -2197,7 +2356,7 @@ h1.title .discount .percent {
 }
 
 .slider-nav .slick-prev,
-.slick-next {
+.slider-nav .slick-next {
     width: 26px;
     height: 16px;
 }

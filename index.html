@@ -53,7 +53,7 @@
                 <div class="container">
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-auto">
-                            <a href="#" class="city-choice">
+                            <a href="#" class="city-choice" data-toggle="modal" data-target="#city-choice">
                                 <img src="img/place_ico.png" alt=""><span>Петропавловск-Камчатский</span>
                             </a>
                         </div>
@@ -109,18 +109,19 @@
                     </div>
                     <div class="col-auto" style="min-width: 210px;text-align: center;">
                         <div class="cart-block">
-                            <a href="#">
+                            <div class="cart-item">
                                 <img src="img/cart_1.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
-                            <a href="#">
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
+                            
+                            <div class="cart-item">
                                 <img src="img/cart_2.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
-                            <a href="#">
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
+                            <div class="cart-item">
                                 <img src="img/cart_3.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
                             <div class="more-cart">+2</div>
                         </div>
                     </div>
@@ -441,7 +442,7 @@
                             <div>
                                 <div class="card card-product info">
                                     <div class="card-header">
-                                        Вы экономите 200 руб. <a href="#"><img src="img/doubts_button.png" alt=""></a>
+                                        Вы экономите 200 руб. <span data-toggle="tooltip" data-placement="bottom" title="Мы провели исследование и покупая у нас, вы сэкономите 200 руб на этом товаре."><img src="img/doubts_button.png" alt=""></span>
                                     </div>
                                     <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                     <div class="card-body">
@@ -1357,7 +1358,7 @@
         </div>
         <div class="p-3">
             <a href="#" class="login"><img src="img/login_menu_icon.png" alt=""> Войти</a>
-            <a href="#" class="city-choice"><img src="img/place_ico.png" alt=""> <span>Петропавловск-Камчатский</span></a>
+            <a href="#" class="city-choice" data-toggle="modal" data-target="#city-choice"><img src="img/place_ico.png" alt=""> <span>Петропавловск-Камчатский</span></a>
         </div>
     </div>
 
@@ -1449,7 +1450,12 @@
         <div class="provider-item">
             <button class="btn close-btn"><img src="img/close_gray.png" alt=""></button>
             <div class="provider-title"><img src="img/car.png" alt=""> Поставщик 1:</div>
-            <div>progress line</div>
+            <div class="progress-block">
+                <div class="progress" style="width: 90%;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress-price">486 руб</div>                                               
+            </div>
             <a class="provider-link" href="#">Смотреть все товары этого поставшика</a>
 
             <div class="goods-list">
@@ -1511,7 +1517,104 @@
 
     </div>
     <div class="offcanvas-cart-footer">
-        <div class="footer-total">Оформить заказ на 1581.10 руб</div>
+        <a href="#" class="footer-total">Оформить заказ на 1581.10 руб</a>
+    </div>
+</div>
+
+
+<div class="add-cart-message arrow-top d-none">
+    <div class="add-cart-message-header">
+        <span>Товар добавлен в корзину</span>
+        <div class="close"></div>
+    </div>
+    <div class="add-cart-message-body">
+        <div class="product-add-item">
+            <div class="row">
+                <div class="col-auto">
+                    <img src="img/cart-popap-img.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="name">Колбаса вареная Вязанка Классич...</div>
+                    <div class="d-flex justify-content-between">
+                        <div class="counter-sm">
+                            <button type="button" class="quantity-minus">-</button>
+                                <div class="count">18</div>
+                            <button type="button" class="quantity-plus">+</button>
+                        </div>
+                        <div class="price">261.10 ₽</div>
+                    </div>
+                </div>
+            </div>                                            
+        </div>
+
+        <div class="seller-progress-block">
+            <div class="seller-link">
+                <img src="img/green-cart.svg" alt="">
+                <span>Продавец:</span>
+                <a href="#">ООО Торговая компан...</a>
+            </div>
+            <div class="progress-block">
+                <div class="progress" style="width: 90%;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress-price">486 руб</div>                                               
+            </div>
+
+            <div class="min-order-message">До минимального заказа осталось: <strong>225 руб</strong></div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- city choice -->
+<div class="modal" tabindex="-1" id="city-choice">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Укажите ваш город</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="search-block mb-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="img/search_ico.png" alt=""></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Введите ваш город">
+                        <div class="input-group-append">
+                            <a href="#" class="input-group-text">Искать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="city-list">
+                    <li><a href="#">Москва и МО</a></li>
+                    <li><a href="#">Санкт-Петербург</a></li>
+                    <li><a href="#">Воронеж</a></li>
+                    <li><a href="#">Екатеринбург</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Краснодар</a></li>
+                    <li><a href="#">Красноярск</a></li>
+                    <li><a href="#">Нижний Новгород</a></li>
+                    <li><a href="#">Новосибирск</a></li>
+                    <li><a href="#">Омск</a></li>
+                    <li><a href="#">Пермь</a></li>
+                    <li><a href="#">Ростов-на-Дону</a></li>
+                    <li><a href="#">Самара</a></li>
+                    <li><a href="#">Саратов</a></li>
+                    <li><a href="#">Уфа</a></li>
+                    <li><a href="#">Челябинск</a></li>
+                </ul>
+
+                <div class="text-right">
+                    <a href="#" class="more">Показать еще</a>                    
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 

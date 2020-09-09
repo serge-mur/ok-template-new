@@ -126,7 +126,7 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     centerMode: true,
                     variableWidth: true
@@ -583,6 +583,8 @@ $(document).ready(function() {
             $(selector).slick('slickNext');
         });
     };
+
+    $('[data-toggle="tooltip"]').tooltip();
 
 });
 
