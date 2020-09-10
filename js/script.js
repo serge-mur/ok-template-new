@@ -67,7 +67,7 @@ $(document).ready(function() {
     });
 
     // offcanvas cart view
-    $(".cart-block").click(function() {
+    $(".cart-block, .cart-link").click(function() {
         $('.offcanvas-cart').css('display', 'flex');
     });
 
@@ -81,7 +81,7 @@ $(document).ready(function() {
     //     // $('.category-main-block').css('display', 'none');
     // });
 
-    toggleSidebar();
+    // toggleSidebar();
 
     // slider in card detail
     $('.slider-for').slick({
@@ -563,14 +563,14 @@ $(document).ready(function() {
 
     }
 
-    function toggleSidebar() {
-        var w = $(window).width();
-        if (w <= 991) {
-            $('#sidebar-filters-block').removeClass('show');
-        } else {
-            $('#sidebar-filters-block').addClass('show');
-        }
-    }
+    // function toggleSidebar() {
+    //     var w = $(window).width();
+    //     if (w <= 991) {
+    //         $('#sidebar-filters-block').removeClass('show');
+    //     } else {
+    //         $('#sidebar-filters-block').addClass('show');
+    //     }
+    // }
 
     function setArrows(selector) {
         $(selector + " .slick-dots").wrap("<div class='slick-dots-wrapper'></div>");

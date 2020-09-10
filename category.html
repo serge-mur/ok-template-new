@@ -30,8 +30,8 @@
                         <div class="col-12">
                             <div class="mobile-top-menu py-2">
                                 <a href="/"><img src="img/mob_logo.png" alt=""></a>
-                                <a href="#" class="mobile-searsh-toggle"><img src="img/search_ico.png" alt=""></a>
-                                <a href="#"><img src="img/mob_cart.png" alt=""></a>
+                                <a href="javascript:;" class="mobile-searsh-toggle"><img src="img/search_ico.png" alt=""></a>
+                                <a href="javascript:;" class="cart-link"><img src="img/mob_cart.png" alt=""></a>
                                 <a class="toggle-button" href="#"><img src="img/burger.png" alt=""></a>                                
                             </div>
                             <div class="mobile-search py-2">
@@ -54,7 +54,7 @@
                 <div class="container">
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-auto">
-                            <a href="#" class="city-choice">
+                            <a href="#" class="city-choice" data-toggle="modal" data-target="#city-choice">
                                 <img src="img/place_ico.png" alt=""><span>Петропавловск-Камчатский</span>
                             </a>
                         </div>
@@ -101,27 +101,29 @@
                                 <img src="img/user_ico.png" alt="">
                                 <div>Войти</div>
                             </a>
-                            <a href="#">
+                            <!-- <a href="#">
                                 <img src="img/favorites_ico.png" alt="">
                                 <div>Избранное</div>
-                            </a>
+                            </a> -->
                             
                         </div>
                     </div>
-                    <div class="col-auto">
+                    <div class="col-auto" style="min-width: 210px;text-align: center;">
                         <div class="cart-block">
-                            <a href="#">
+                            <div class="cart-item">
                                 <img src="img/cart_1.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
-                            <a href="#">
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
+                            
+                            <div class="cart-item">
                                 <img src="img/cart_2.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
-                            <a href="#">
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
+                            <div class="cart-item">
                                 <img src="img/cart_3.png" alt="">
-                                <div>800 &#8381;</div>
-                            </a>
+                                <div class="total-price">800 &#8381;</div>
+                            </div>
+                            <div class="more-cart">+2</div>
                         </div>
                     </div>
                 </div>
@@ -143,16 +145,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="nav">
+                            <div class="nav mr-5">
                                 <a href="#" class="nav-link">Бренды</a>
                                 <a href="#" class="nav-link">Поставщики</a>
+                            </div>
+
+                            <div class="other-nav">
+                                <a href="#" class="nav-link">Акции и лучшие цены</a>
                             </div>
                         </div>
  
                         <div class="main-menu" id="main-menu">
                             <a href="#" class="btn my-3 ml-2">Выбрать поставщика</a>
                             <ul>
-                                <li class="active"><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Бакалея</span></a>
+                                <li class="active">
+                                    <a href="#"><img src="img/menu-ico/carbon_wheat.svg" alt=""><span>Бакалея</span></a>
                                     <ul>
                                         <li><a href="#"><b>Азиатская кухня</b></a></li> 
                                         <li><a href="#">Кетчуп, майонез, соусы, сиропы</a></li> 
@@ -176,98 +183,98 @@
                                         <img class="img-fluid" src="img/menu_banner.jpg" alt="">
                                     </a>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Вода, напитки, соки</span></a>
+                                <li><a href="#"><img src="img/menu-ico/ic_sharp-local-drink.svg" alt=""><span>Вода, напитки, соки</span></a>
                                     <ul>
                                         <li><a href="#">Минеральная вода</a></li> 
                                         <li><a href="#">Напитки, лимонады, квас</a></li> 
                                         <li><a href="#">Соки, нектары, морсы, компоты</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Детское питание и товары для детей</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Детское питание и товары для детей</span></a>
                                     <ul>
                                         <li><a href="#">Детская косметика и гигиена</a></li> 
                                         <li><a href="#">Детские молочные продукты</a></li> 
                                         <li><a href="#">Детские смеси</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Замороженные продукты</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Замороженные продукты</span></a>
                                     <ul>
                                         <li><a href="#">Вареники, блинчики</a></li> 
                                         <li><a href="#">Готовые замороженные блюда</a></li> 
                                         <li><a href="#">Замороженные десерты</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Кондитерские изделия</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Кондитерские изделия</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Консервация</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Консервация</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Молочные продкуты, сыры, яйца</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Молочные продкуты, сыры, яйца</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Мясо, птица, рыба, гастрономия</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Мясо, птица, рыба, гастрономия</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Кондитерские изделия</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Кондитерские изделия</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Овощи, фрукты, зелень</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Овощи, фрукты, зелень</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Товары для дома</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Товары для дома</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Чай, кофе, какао</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Чай, кофе, какао</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для офисов</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Для офисов</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для HoReCa</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Для HoReCa</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
                                         <li><a href="#">Вафли, пряники, печенье, крекер</a></li>
                                     </ul>
                                 </li> 
-                                <li><a href="#"><img src="img/menu-ico/voda.png" alt=""><span>Для магазинов</span></a>
+                                <li><a href="#"><img src="img/menu-ico/uil_kid.svg" alt=""><span>Для магазинов</span></a>
                                     <ul>
                                         <li><a href="#">Баранки, соломка, сушки, сухари, хлебцы</a></li> 
                                         <li><a href="#">Батончики, снеки</a></li> 
@@ -297,11 +304,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-3" id="category-sidebar">
+                <div class="col-12 col-lg-3 d-none d-lg-block" id="category-sidebar">
                     
-                    <div class="d-lg-none">
+                    <!-- <div class="d-lg-none">
                         <button class="btn btn-primary toggle-filters" data-toggle="collapse" href="#sidebar-filters-block">Фильтры</button>
-                    </div>
+                    </div> -->
 
                     <div class="sidebar-filters-block collapse show" id="sidebar-filters-block">
                         <h3 class="title">Фильтры</h3>
@@ -394,6 +401,12 @@
 
                         <a class="filter-reset" href="#">Сбросить весь фильтр</a>
 
+                        <div class="utp-block mt-5">
+                            <div><img src="img/utp_detail_1.png" alt=""> Безопасная оплата</div>
+                            <div><img src="img/utp_detail_2.png" alt=""> Контроль качества</div>
+                            <div><img src="img/utp_detail_3.png" alt=""> Надежная доставка</div>
+                        </div>
+
                     </div>
                 </div>
                 
@@ -406,7 +419,12 @@
                                 <img class="img-fluid" src="img/cat_top_banner.jpg" alt="">
                             </a>
 
-                            <div class="tags-block my-4 d-none d-lg-block">
+                            <div class="control-block my-4">
+                                <button class="btn filters-link"><img src="img/filter_img.svg" alt="">Фильтры</button>
+                                <button class="btn view-link">Вид</button>
+                            </div>
+
+                            <div class="tags-block my-4">
                                 <a href="#" class="tag-item active">Все</a>
                                 <a href="#" class="tag-item">Вода</a>
                                 <a href="#" class="tag-item">Напитки</a>
@@ -414,28 +432,29 @@
                         </div>
                     </div>
 
-                    <div class="card-filters-block">
-                        <div class="row align-items-center my-3">
-                            <div class="col-12 col-lg-4">
+                    <div class="card-filters-block d-none d-lg-block">
+                        <div class="row justify-content-between align-items-center my-3">
+                            <div class="col-12 col-lg-auto">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">Товары по акции</label>
+                                    <label class="custom-control-label card-filters-label" for="customSwitch1">Товары по акции</label>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <select class="custom-select">
-                                    <option selected>Товаров показано: 6</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                            <div class="col-12 col-lg-auto d-flex align-items-center">
+                                <div class="card-filters-label">Товаров на странице:</div>
+                                <div class="quantity-goods-block">
+                                    <a href="#" class="quantity">12</a>
+                                    <a href="#" class="quantity">24</a>
+                                    <a href="#" class="quantity">36</a>
+                                </div>
                             </div>
-                            <div class="col-12 col-lg-4">
+                            <div class="col-12 col-lg-auto d-flex align-items-center">
+                                <div class="card-filters-label">Сортировать по:</div>
                                 <select class="custom-select">
-                                    <option selected>Сортировать по: популярности</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1" selected>Популярности</option>
+                                    <option value="2">Сначала дешевле</option>
+                                    <option value="3">Сначала дороже</option>
+                                    <option value="4">По алфавиту</option>
                                 </select>                                
                             </div>
                         </div>
@@ -443,11 +462,8 @@
 
                     <div class="row product-grid">
                         <div class="col-6 col-lg-4">
-                            <div class="card card-product action">
-                                <div class="percent-badge">-27%</div>
-                                <div class="card-header">
-                                    Акция: 3 дня
-                                </div>
+                            <div class="card card-product">
+                                <div class="card-header"></div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
                                     <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
@@ -491,10 +507,9 @@
                             </div>                             
                         </div>
                         <div class="col-6 col-lg-4">
-                            <div class="card card-product action">
-                                <div class="percent-badge">-27%</div>
+                            <div class="card card-product info">
                                 <div class="card-header">
-                                    Акция: 3 дня
+                                    Вы экономите 200 руб.
                                 </div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
@@ -515,10 +530,53 @@
                             </div>                             
                         </div>
                         <div class="col-6 col-lg-4">
-                            <div class="card card-product action">
-                                <div class="percent-badge">-27%</div>
+                            <div class="card card-product add-card">
                                 <div class="card-header">
-                                    Акция: 3 дня
+                                    Товар добавлен в корзину <img src="img/green_check.png" alt="">
+                                </div>
+                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                <div class="card-body">
+                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                    <div class="separator"></div>
+                                    <div class="buy-block">
+                                        <div class="price-block">
+                                            <div class="price">261.10 &#8381;</div>                                                
+                                            <div class="old-price">293.33 &#8381;</div>
+                                        </div>
+                                        <button class="btn btn-buy">Купить</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card card-product">
+                                <div class="card-header"></div>
+                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                <div class="card-body">
+                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                    <div class="separator"></div>
+                                    <div class="buy-block">
+                                        <div class="price-block">
+                                            <div class="price">261.10 &#8381;</div>                                                
+                                            <div class="old-price">293.33 &#8381;</div>
+                                        </div>
+                                        <button class="btn btn-buy">Купить</button>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                </div>
+                            </div>                             
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <div class="card card-product in-card">
+                                <div class="card-header">
+                                    <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
                                 </div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
@@ -797,7 +855,9 @@
                             <a class="nav-link" href="#">Договор-Оферта</a>
                             <a class="nav-link" href="#">Пользовательское соглашение</a>
                             <a class="nav-link" href="#">Политика конфиденциальности</a>
+                            
                         </nav>
+                        <div class="copy">&copy; OTKOROBKI.RU</div>
                     </div>
                     <div class="col-auto">
                         <nav class="nav social-icons">
