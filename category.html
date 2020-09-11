@@ -304,13 +304,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-3 d-none d-lg-block" id="category-sidebar">
-                    
-                    <!-- <div class="d-lg-none">
-                        <button class="btn btn-primary toggle-filters" data-toggle="collapse" href="#sidebar-filters-block">Фильтры</button>
-                    </div> -->
-
-                    <div class="sidebar-filters-block collapse show" id="sidebar-filters-block">
+                <div class="col-12 col-lg-3 d-none d-lg-block">
+                    <div class="filters-block">
                         <h3 class="title">Фильтры</h3>
 
                         <div class="filter-block">
@@ -419,16 +414,24 @@
                                 <img class="img-fluid" src="img/cat_top_banner.jpg" alt="">
                             </a>
 
-                            <div class="control-block my-4">
-                                <button class="btn filters-link"><img src="img/filter_img.svg" alt="">Фильтры</button>
-                                <button class="btn view-link">Вид</button>
+                            <div class="control-block my-4 d-lg-none">
+                                <button class="btn filters-link toggle-filters"><img src="img/filter_img.svg" alt="">Фильтры</button>
+                                <button class="btn view-link toggle-view">Вид</button>
                             </div>
 
-                            <div class="tags-block my-4">
-                                <a href="#" class="tag-item active">Все</a>
-                                <a href="#" class="tag-item">Вода</a>
-                                <a href="#" class="tag-item">Напитки</a>
+                            <div class="row my-3">
+                                <div class="col-12 mob-gutters pl-3">
+                                    <div class="tags-block tags-slider">
+                                        <a href="#" class="tag-item">Все</a>
+                                        <a href="#" class="tag-item active">Вода</a>
+                                        <a href="#" class="tag-item">Напитки</a>
+                                        <a href="#" class="tag-item">Лимонады</a>
+                                        <a href="#" class="tag-item">Пиво</a>
+                                        <a href="#" class="tag-item">Газировка</a>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -463,7 +466,7 @@
                     <div class="row product-grid">
                         <div class="col-6 col-lg-4">
                             <div class="card card-product">
-                                <div class="card-header"></div>
+                                <div class="card-header">&nbsp;</div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
                                     <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
@@ -478,7 +481,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""><span>В наличии у 4 поставщиков</div></span>                                    
                                 </div>
                             </div>                             
                         </div>
@@ -494,7 +497,7 @@
                                     <div class="separator"></div>
                                     <div class="buy-block">
                                         <div class="price-block">
-                                            <div class="price">261.10 &#8381;</div>                                                
+                                            <div class="price">111.10 &#8381;</div>                                                
                                             <div class="old-price">293.33 &#8381;</div>
                                         </div>
                                         <button class="btn btn-buy">Купить</button>
@@ -502,14 +505,14 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt="">В наличии у 4 поставщиков</div>                                    
                                 </div>
                             </div>                             
                         </div>
                         <div class="col-6 col-lg-4">
                             <div class="card card-product info">
                                 <div class="card-header">
-                                    Вы экономите 200 руб.
+                                    Вы экономите 200 руб. <span data-toggle="tooltip" data-placement="bottom" title="Мы провели исследование и покупая у нас, вы сэкономите 200 руб на этом товаре."><img src="img/doubts_button.png" alt=""></span>
                                 </div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
@@ -525,7 +528,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt="">В наличии у 4 поставщиков</div>                                    
                                 </div>
                             </div>                             
                         </div>
@@ -545,16 +548,23 @@
                                         </div>
                                         <button class="btn btn-buy">Купить</button>
                                     </div>
+                                    <div class="counter-block">
+                                        <div class="counter">
+                                            <button type="button" class="quantity-minus">-</button>
+                                                <div class="count">18</div>
+                                            <button type="button" class="quantity-plus">+</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt="">В наличии у 4 поставщиков</div>                                    
                                 </div>
                             </div>                             
                         </div>
                         <div class="col-6 col-lg-4">
-                            <div class="card card-product">
-                                <div class="card-header"></div>
+                            <div class="card card-product not-available">
+                                <div class="card-header">&nbsp;</div>
                                 <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
                                 <div class="card-body">
                                     <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
@@ -564,12 +574,12 @@
                                             <div class="price">261.10 &#8381;</div>                                                
                                             <div class="old-price">293.33 &#8381;</div>
                                         </div>
-                                        <button class="btn btn-buy">Купить</button>
+                                        <button class="btn btn-buy" disabled>Купить</button>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt="">В наличии у 4 поставщиков</div>                                    
                                 </div>
                             </div>                             
                         </div>
@@ -592,7 +602,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="text-sold-by">Продается по 2 шт.</div>
-                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>                                    
+                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt="">В наличии у 4 поставщиков</div>                                    
                                 </div>
                             </div>                             
                         </div>
@@ -992,6 +1002,152 @@
         <li><a href="#">Для магазинов</a></li>
     </ul>
 </nav>
+
+<div class="mob-filters">
+    <div class="mob-header">
+        <div class="row">
+            <div class="col-6">
+                <h3>Фильтры</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a href="#" class="close-mob-filters"><img src="img/close_gray.png" alt=""></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="filters-block">
+        <div class="filter-block">
+            <a class="filter-name" data-toggle="collapse" href="#collapse0">
+                Цена за штуку
+            </a>
+            <div class="collapse show" id="collapse0">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control fill" id="range-min-m" placeholder="От 0" value="">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control fill" id="range-max-m" placeholder="До 0" value="">
+                    </div>
+                </div>
+            </div>                              
+        </div>
+
+        <div class="filter-block">
+            <a class="filter-name" data-toggle="collapse" href="#collapse1">
+                Поставщики
+            </a>
+            <div class="collapse show" id="collapse1">
+                <p class="warning-text">Разные товары везут разные поставщики и у каждого есть минимальный заказ.</p>
+            </div>                            
+        </div>
+
+        <div class="filter-block">
+            <a class="filter-name" data-toggle="collapse" href="#collapse2">
+                Количество товаров в упаковке
+            </a>
+            <div class="collapse show" id="collapse2">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="customCheck21m">
+                    <label class="custom-control-label" for="customCheck21m">1</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="customCheck22m">
+                    <label class="custom-control-label" for="customCheck22m">6</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="customCheck23m">
+                    <label class="custom-control-label" for="customCheck23m">12</label>
+                </div>
+            </div>                            
+        </div>
+
+        <div class="filter-block">
+            <a class="filter-name" data-toggle="collapse" href="#collapse3">
+                Бренды
+            </a>
+            <div class="collapse show" id="collapse3">
+                <input class="form-control" type="text" placeholder="Поиск по брендам">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck31m">
+                    <label class="custom-control-label" for="customCheck31m">Чайкофский Mon Café (6)</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck32m">
+                    <label class="custom-control-label" for="customCheck32m">Белочка (2)</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck33m">
+                    <label class="custom-control-label" for="customCheck33m">Big Bon (22)</label>
+                </div>
+            </div>                            
+        </div>
+
+        <div class="filter-block border-bottom-0">
+            <a class="filter-name" data-toggle="collapse" href="#collapse4">
+                Не содержит
+            </a>
+            <div class="collapse show" id="collapse4">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck41m">
+                    <label class="custom-control-label" for="customCheck41m">Глютена (22)</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck42m">
+                    <label class="custom-control-label" for="customCheck42m">Сахара (12)</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck43m">
+                    <label class="custom-control-label" for="customCheck43m">ГMO (2)</label>
+                </div>
+            </div>                            
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-primary" href="#">Применить</a>            
+        </div>
+
+    </div>
+</div>
+
+<div class="mob-view">
+    <div class="mob-header">
+        <div class="row">
+            <div class="col-6">
+                <h3>Вид</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a href="#" class="close-mob-view"><img src="img/close_gray.png" alt=""></a> 
+            </div>
+        </div>        
+    </div>
+
+    <div class="filters-block">
+
+        <div class="card-filters-block">
+            <div class="row my-3">
+                <div class="col-12 mb-5">
+                    <div class="card-filters-label">Сортировать по:</div>
+                    <select class="custom-select">
+                        <option value="1" selected>Популярности</option>
+                        <option value="2">Сначала дешевле</option>
+                        <option value="3">Сначала дороже</option>
+                        <option value="4">По алфавиту</option>
+                    </select>                                
+                </div>
+                <div class="col-12">
+                    <div class="card-filters-label mb-3">Товаров на странице:</div>
+                    <div class="quantity-goods-block">
+                        <a href="#" class="quantity">12</a>
+                        <a href="#" class="quantity">24</a>
+                        <a href="#" class="quantity">36</a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+</div>
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="js/jquery-3.4.1.min.js"></script>

@@ -76,12 +76,20 @@ $(document).ready(function() {
     });
 
 
-    // $(".toggle-filters").click(function() {
-    //     $('#category-sidebar').css('display', 'block');
-    //     // $('.category-main-block').css('display', 'none');
-    // });
+    $(".toggle-filters").click(function() {
+        $('.mob-filters').css('display', 'block');
+    });
+    $(".close-mob-filters").click(function() {
+        $('.mob-filters').css('display', 'none');
+    });
 
-    // toggleSidebar();
+    $(".toggle-view").click(function() {
+        $('.mob-view').css('display', 'block');
+    });
+    $(".close-mob-view").click(function() {
+        $('.mob-view').css('display', 'none');
+    });
+
 
     // slider in card detail
     $('.slider-for').slick({
@@ -128,8 +136,8 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -199,10 +207,10 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -236,10 +244,10 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -347,10 +355,10 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -384,10 +392,10 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -561,16 +569,26 @@ $(document).ready(function() {
             ]
         });
 
-    }
+        $('.tags-slider').slick({
+            infinite: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                        variableWidth: true
+                    }
+                },
+            ]
+        });
 
-    // function toggleSidebar() {
-    //     var w = $(window).width();
-    //     if (w <= 991) {
-    //         $('#sidebar-filters-block').removeClass('show');
-    //     } else {
-    //         $('#sidebar-filters-block').addClass('show');
-    //     }
-    // }
+    }
 
     function setArrows(selector) {
         $(selector + " .slick-dots").wrap("<div class='slick-dots-wrapper'></div>");
