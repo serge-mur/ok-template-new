@@ -1834,8 +1834,10 @@ li {
 }
 .modal-title {
     font-size: 1.25rem;
+    font-weight: bold;
     letter-spacing: 0.05em;
     color: #000;
+    line-height: 135%;
 }
 .modal-content {
     border-radius: 10px;
@@ -2421,15 +2423,31 @@ section h2 {
 
 .mob-header {
     background-color: var(--second);
-    margin: -10px;
-    height: 30px;
+    margin: -10px -10px 15px -10px;
+    height: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;      
 }
 .mob-header h3 {
     background-color: var(--second);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--black-gray);    
+    color: var(--black-gray);
+    margin-bottom: 0;
+  
 }
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url(../img/close_gray.png);
+    width: 16px;
+    height: 17px;
+}
+
+
 /* main block */
 
 .title {
@@ -2570,6 +2588,7 @@ section h2 {
 
 h1.title {
     margin-bottom: 10px;
+    line-height: 135%;
 }
 h1.title .discount {
     font-size: 1rem;
@@ -2579,6 +2598,7 @@ h1.title .discount {
     border: 1px solid var(--border);
     border-radius: 10px;
     padding-right: 10px;
+    line-height: normal;
 }
 h1.title .discount .percent {
     display: inline-block;
@@ -2598,12 +2618,22 @@ h1.title .discount .percent {
     color: var(--link);
     font-size: 0.875rem;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+.detail-line .rating-sm a:hover {
+    background-color: var(--second);
 }
 
 .detail-line .btn {
     color: var(--link);
     font-size: 0.875rem;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+.detail-line .btn:hover {
+    background-color: var(--second);
 }
 
 .detail-line .this-buy {
@@ -2684,18 +2714,40 @@ h1.title .discount .percent {
 }
 
 .package-choice-block .package-item {
+    min-width: 90px;
+    min-height: 90px;
+}
+.package-choice-block .package-item .package-item-header {
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px;    
+}
+.package-choice-block .package-item .package-item-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     border: 2px solid var(--border);
     border-radius: 10px;
-    padding: 20px 10px;
-    min-width: 90px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    height: 100%;
+}
+.package-choice-block .package-item.with-title .package-item-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 10px 10px;
+    height: 66px;
 }
 
-.package-choice-block .package-item.selected,
-.package-choice-block .package-item:hover {
+.package-choice-block .package-item.selected .package-item-body,
+.package-choice-block .package-item:hover .package-item-body {
     background-color: var(--second);
     border: 2px solid var(--main);
     cursor: pointer;
@@ -2777,18 +2829,29 @@ h1.title .discount .percent {
     margin-bottom: 10px;
 }
 .detail-buy-block .counter-block .count {
-    background-color: transparent;
+    background-color: #fff;
     border: none;
+}
+.detail-buy-block .counter-block .counter {
+    background-color: #fff;
+}
+.detail-buy-block .counter .quantity-minus,
+.detail-buy-block .counter .quantity-plus {
+    padding: 7px 18px;
 }
 
 .detail-buy-block .btn {
+    padding: 7px 23px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .detail-buy-block .seller-link-block {
     display: flex;
-    font-size: 0.875rem;
+    font-size: 0.875rem;   
+}
+.detail-buy-block .seller-link-block a {
+    font-weight: bold;
 }
 
 .detail-buy-block .seller-link-block span {
@@ -2847,6 +2910,17 @@ h1.title .discount .percent {
     font-size: 1.25rem;
     font-weight: bold;
     letter-spacing: 0.05em;
+}
+.all-sellers .provider-link {
+    display: inline-block;
+}
+.all-sellers .provider-link:after {
+    content: url(../img/cart-arrow.png);
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.all-sellers .btn {
+    padding: 7px 23px;
 }
 
 .rating-sm2 {
@@ -2918,6 +2992,9 @@ h1.title .discount .percent {
     font-weight: bold;
     letter-spacing: 0.05em;
 }
+.description-product-section .how-to-make-order .btn {
+    padding: 7px 23px;
+}
 
 .reviews-section .reviews-block {
     margin-bottom: 80px;
@@ -2926,13 +3003,19 @@ h1.title .discount .percent {
 .reviews-section .reviews-block .review-item {
     margin-bottom: 40px;
 }
+.reviews-section .reviews-block .review-item .review-item-top {
+    display: flex;
+}
+.reviews-section .reviews-block .review-item .photo {
+    margin-right: 15px;
+}
 
-.reviews-section .reviews-block .review-item .name {
+.reviews-section .reviews-block .review-item  .review-item-top .name {
     color: #000;
     font-size: 0.875rem;
 }
 
-.reviews-section .reviews-block .review-item .date {
+.reviews-section .reviews-block .review-item  .review-item-top .date {
     color: #000;
     font-size: 0.875rem;
 }
@@ -2964,6 +3047,9 @@ h1.title .discount .percent {
     background: url(../img/star_gray_sm.png);
 }
 
+.raiting-info-block .stars-block {
+    margin-bottom: 30px;
+}
 .raiting-info-block .num-rating {
     color: #000;
     font-size: 2rem;
@@ -2974,6 +3060,7 @@ h1.title .discount .percent {
 .raiting-info-block .progress-table {
     width: 100%;
     vertical-align: middle;
+    margin-bottom: 30px;
 }
 
 .raiting-info-block .progress-table .num-stars {
@@ -2982,14 +3069,140 @@ h1.title .discount .percent {
     font-weight: 500;
 }
 
+.raiting-info-block .progress-table tr>td {
+   padding: 7px 0;
+}
+.raiting-info-block .progress-table .num-stars {
+    width: 80px;
+}
 .raiting-info-block .progress-table .progress {
-    width: 240px;
+    width: 220px;
+    height: 5px;
+}
+.raiting-info-block .progress-table .progress .progress-bar {
+    background-color: var(--main);
 }
 
 .raiting-info-block .progress-table .num-review {
     color: var(--gray);
     font-size: 0.6875rem;
 }
+.raiting-info-block .btn {
+    width: 100%;
+    font-size: 1.25rem;
+    text-transform: unset;
+    border-radius: 10px;
+    padding: 7px 23px;
+}
+.modal#write-review .form-group label {
+    color: var(--black-gray);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.modal#write-review .form-group textarea {
+    border-radius: 10px;
+}
+.modal#write-review .load-photo {
+    display: block;
+    font-size: 0.875rem; 
+    margin: 10px 0 30px 0;   
+}
+.modal#write-review .form-group input {
+    background-color: var(--second);
+    border-color: transparent;
+    font-size: 0.875rem;
+    border-radius: 100px;
+    padding: 24px 16px;
+}
+.modal#write-review .btn {
+    letter-spacing: 0.05em;
+}
+
+/* set rating */
+.set-rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.set-rating .set-rating-item {
+    width: 115px;
+}
+.set-rating .set-rating-item .star {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/big_star.svg) no-repeat;
+    margin: 0 auto 5px auto;
+}
+.set-rating .set-rating-item:hover .star {
+    background: url(../img/big_star_fill.svg) no-repeat;
+    cursor: pointer;
+}
+.set-rating .set-rating-item .name {
+    display: block;
+    color: var(--black-gray);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.modal#login-continue .modal-body {
+    padding-bottom: 90px;
+}
+.modal#login-continue h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 135%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+}
+.modal#login-continue .form-group input {
+    background-color: var(--second);
+    border-color: transparent;
+    font-size: 0.875rem;
+    border-radius: 100px;
+    padding: 24px 16px;
+    margin: 0 auto;
+    width: 270px;
+}
+.modal#login-continue .form-group .form-link {
+    display: block;
+    color: var(--gray);
+    font-size: 0.6875rem;
+    margin: 0 auto;
+    text-align: right;
+    width: 270px;
+}
+.modal#login-continue .form-group .form-link:hover {
+    color: var(--gray);
+}
+.modal#login-continue .btn {
+    letter-spacing: 0.05em;
+    padding: 7px 23px;
+}
+
+.modal#no-buy-product .modal-body h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 135%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+.modal#no-buy-product .modal-body p {
+    color: var(--black-gray);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 135%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.modal#no-buy-product .modal-body img {
+    margin-bottom: 50px;
+}
+
+
 
 .section-tabs .nav-tabs {
     border-bottom: 1px solid var(--border);
@@ -3002,8 +3215,8 @@ h1.title .discount .percent {
 .section-tabs .nav-tabs .nav-link {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: var(--second);
-    color: var(--black-gray);
+    background-color: rgba(124, 124, 124, 0.4);
+    color: #fff;
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;

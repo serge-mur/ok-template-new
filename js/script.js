@@ -618,16 +618,21 @@ document.addEventListener(
         });
         const drawer = menu.offcanvas();
 
-        document.querySelector("a[href='#mob-catalog-menu']")
-            .addEventListener("click", (evnt) => {
-                evnt.preventDefault();
-                drawer.open();
-            });
-        document.querySelector("a[href='#mob-catalog-menu-bottom']")
-            .addEventListener("click", (evnt) => {
-                evnt.preventDefault();
-                drawer.open();
-            });
+        if (document.querySelector("a[href='#mob-catalog-menu']")) {
+            document.querySelector("a[href='#mob-catalog-menu']")
+                .addEventListener("click", (evnt) => {
+                    evnt.preventDefault();
+                    drawer.open();
+                });
+
+        };
+        if (document.querySelector("a[href='#mob-catalog-menu-bottom']")) {
+            document.querySelector("a[href='#mob-catalog-menu-bottom']")
+                .addEventListener("click", (evnt) => {
+                    evnt.preventDefault();
+                    drawer.open();
+                });
+        };
     }
 );
 
