@@ -488,7 +488,7 @@
                                         <img class="img-fluid" src="img/no_availability.png" alt="">
                                     </div>
 
-                                    <div class="utp-block">
+                                    <div class="utp-block d-none d-lg-block">
                                         <div><img src="img/utp_detail_1.png" alt=""> Безопасная оплата</div>
                                         <div><img src="img/utp_detail_2.png" alt=""> Контроль качества</div>
                                         <div><img src="img/utp_detail_3.png" alt=""> Надежная доставка</div>
@@ -501,9 +501,43 @@
                     </div>
                 </section>
 
-                <section class="all-sellers">
-                    <h2 class="title">Все продавцы и цены</h2>
-                    <div class="all-sellers-block">
+                <section class="specifications-section mob-collapse d-lg-none">
+                    <h2 class="title collapsed" data-toggle="collapse" data-target="#specifications-section-collapase">Характеристики</h2>
+                    <div id="specifications-section-collapase" class="collapse">
+                        <table class="specifications-table">
+                            <tr>
+                                <td>Тип</td>
+                                <td>Газированный напиток</td>
+                            </tr>
+                            <tr>
+                                <td>Цена за шт</td>
+                                <td>55 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Обьем,л.</td>
+                                <td>0.33</td>
+                            </tr>
+                            <tr>
+                                <td>Энергетическая <br> ценность, ккал/100г</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Вид упаковки</td>
+                                <td>Жестяная банка</td>
+                            </tr>
+                            <tr>
+                                <td>Вес 1шт</td>
+                                <td>1 кг</td>
+                            </tr>
+                        </table>                        
+                    </div>
+
+                </section>
+
+                <section class="all-sellers mob-collapse">
+                    <h2 class="title collapsed" data-toggle="collapse" data-target="#all-sellers-collapase">Все продавцы и цены</h2>
+                    
+                    <div class="all-sellers-block collapse" id="all-sellers-collapase">
 
                         <div class="all-sellers-item active">
                             <div class="row">
@@ -572,479 +606,748 @@
 
                 </section>
 
-                <section class="description-product-section">
-                    <h2 class="title">Описание</h2>
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <h3>KБЖУ</h3>
-                            <div class="composition-block">
-                                <div class="composition-item">
-                                    <div class="dig">48.25</div>
-                                    <div class="name">Калории</div>
+                <section class="description-product-section mob-collapse">
+                    <h2 class="title collapsed" data-toggle="collapse" data-target="#description-product-section-collapase">Описание</h2>
+                    <div id="description-product-section-collapase" class="collapse">
+                        <div class="row">
+                            <div class="col-12 col-lg-8">
+                                <h3>KБЖУ</h3>
+                                <div class="composition-block">
+                                    <div class="composition-item">
+                                        <div class="dig">48.25</div>
+                                        <div class="name">Калории</div>
+                                    </div>
+                                    <div class="composition-item">
+                                        <div class="dig">0.50 г</div>
+                                        <div class="name">Белки</div>
+                                    </div>
+                                    <div class="composition-item">
+                                        <div class="dig">0.43 г</div>
+                                        <div class="name">Жиры</div>
+                                    </div>
+                                    <div class="composition-item">
+                                        <div class="dig">10.38 г</div>
+                                        <div class="name">Углеводы</div>
+                                    </div>
                                 </div>
-                                <div class="composition-item">
-                                    <div class="dig">0.50 г</div>
-                                    <div class="name">Белки</div>
-                                </div>
-                                <div class="composition-item">
-                                    <div class="dig">0.43 г</div>
-                                    <div class="name">Жиры</div>
-                                </div>
-                                <div class="composition-item">
-                                    <div class="dig">10.38 г</div>
-                                    <div class="name">Углеводы</div>
+
+                                <div class="text-block">
+                                    <p>
+                                        <span class="mr-5">Срок хранения: <strong>67 дней</strong></span>
+                                        <span>Тип тары: <strong>67 дней</strong></span>
+                                    </p>
+                                    <p>Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары
+                                        бренда Pepsi</p>
+                                    <p>Напиток безалкогольный Пепси Классик, лайт газированный ст/б в наличии в Москве</p>
                                 </div>
                             </div>
-
-                            <div class="text-block">
-                                <p>
-                                    <span class="mr-5">Срок хранения: <strong>67 дней</strong></span>
-                                    <span>Тип тары: <strong>67 дней</strong></span>
-                                </p>
-                                <p>Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары
-                                    бренда Pepsi</p>
-                                <p>Напиток безалкогольный Пепси Классик, лайт газированный ст/б в наличии в Москве</p>
+                            <div class="col-12 col-lg-4">
+                                <div class="how-to-make-order">
+                                    <div><img src="img/zakaz.png" alt=""></div>
+                                    <div>
+                                        <div class="title mb-2">Как сделать заказ?</div>
+                                        <div><button class="btn btn-secondary" data-toggle="modal" data-target="#how-make-order">Узнать</button></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="how-to-make-order">
-                                <div><img src="img/zakaz.png" alt=""></div>
-                                <div>
-                                    <div class="title mb-2">Как сделать заказ?</div>
-                                    <div><button class="btn btn-secondary" data-toggle="modal" data-target="#how-make-order">Узнать</button></div>
+                    </div>
+                </section>
+
+                <section class="reviews-section mob-collapse">
+                    <h2 class="title collapsed" data-toggle="collapse" data-target="#reviews-section-collapase">Отзывы (6)</h2>
+                    <div id="reviews-section-collapase" class="collapse">
+                        <div class="row">
+                            <div class="col-12 col-lg-7">
+                                <div class="reviews-block">
+                                    <div class="review-item">
+                                        <div class="review-item-top">
+                                            <div class="photo">
+                                                <img src="img/review-photo.png" alt="">
+                                            </div>
+                                            <div class="w-100">
+                                                <div class="name">Богдан Л.</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="rating-sm">
+                                                        <span class="stars">
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star star-gray"></span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="date">22 Августа</div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары бренда Pepsi
+                                        </div>
+                                    </div>
+
+                                    <div class="review-item">
+                                        <div class="review-item-top">
+                                            <!-- <div class="photo">
+                                                <img src="img/review-photo.png" alt="">
+                                            </div> -->
+                                            <div class="w-100">
+                                                <div class="name">Богдан Л.</div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="rating-sm">
+                                                        <span class="stars">
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star"></span>
+                                                        <span class="star star-gray"></span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="date">22 Августа</div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары бренда Pepsi
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button class="btn btn-secondary">Загрузить еще</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-12 col-lg-4">
+                                <div class="raiting-info-block">
+                                    <div class="d-flex justify-content-between stars-block">
+                                        <div class="rating">
+                                            <span class="stars">
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star"></span>
+                                            <span class="star star-gray"></span>
+                                            </span>
+                                        </div>
+                                        <div class="num-rating">4/5</div>
+                                    </div>
+                                    <table class="progress-table">
+                                        <tr>
+                                            <td class="num-stars">5 звезд</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="num-review">22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num-stars">4 звезд</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="num-review">22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num-stars">3 звезд</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="num-review">22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num-stars">2 звезд</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="num-review">22</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num-stars">1 звезд</td>
+                                            <td>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="num-review">22</td>
+                                        </tr>
+                                    </table>
+
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#write-review">Написать отзыв</button>
+                                    <a class="d-block" href="#" data-toggle="modal" data-target="#no-buy-product">товар еще не покупался</a>
+                                    <a class="d-block" href="#" data-toggle="modal" data-target="#login-continue">войдите, чтобы продолжить</a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="reviews-section">
-                    <h2 class="title">Отзывы (6)</h2>
-                    <div class="row">
-                        <div class="col-12 col-lg-7">
-                            <div class="reviews-block">
-                                <div class="review-item">
-                                    <div class="review-item-top">
-                                        <div class="photo">
-                                            <img src="img/review-photo.png" alt="">
-                                        </div>
-                                        <div class="w-100">
-                                            <div class="name">Богдан Л.</div>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="rating-sm">
-                                                    <span class="stars">
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star star-gray"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="date">22 Августа</div>
-                                            </div>                                            
-                                        </div>
-                                    </div>
-                                    <div class="message">
-                                        Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары бренда Pepsi
-                                    </div>
-                                </div>
-
-                                <div class="review-item">
-                                    <div class="review-item-top">
-                                        <!-- <div class="photo">
-                                            <img src="img/review-photo.png" alt="">
-                                        </div> -->
-                                        <div class="w-100">
-                                            <div class="name">Богдан Л.</div>
-                                            <div class="d-flex justify-content-between">
-                                                <div class="rating-sm">
-                                                    <span class="stars">
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star"></span>
-                                                    <span class="star star-gray"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="date">22 Августа</div>
-                                            </div>                                            
-                                        </div>
-                                    </div>
-                                    <div class="message">
-                                        Покупайте Напиток безалкогольный Пепси Классик, лайт газированный ст/б с доставкой или самовывозом по ценам производителя ПепсиКо Холдингс. Отличные низкие цены возможны в связи с отсутствием наценок магазинов на все товары бренда Pepsi
-                                    </div>
-                                </div>
-
-                                <div class="text-center">
-                                    <button class="btn btn-secondary">Загрузить еще</button>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-1"></div>
-                        <div class="col-12 col-lg-4">
-                            <div class="raiting-info-block">
-                                <div class="d-flex justify-content-between stars-block">
-                                    <div class="rating">
-                                        <span class="stars">
-                                        <span class="star"></span>
-                                        <span class="star"></span>
-                                        <span class="star"></span>
-                                        <span class="star"></span>
-                                        <span class="star star-gray"></span>
-                                        </span>
-                                    </div>
-                                    <div class="num-rating">4/5</div>
-                                </div>
-                                <table class="progress-table">
-                                    <tr>
-                                        <td class="num-stars">5 звезд</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="num-review">22</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num-stars">4 звезд</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="num-review">22</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num-stars">3 звезд</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="num-review">22</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num-stars">2 звезд</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="num-review">22</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="num-stars">1 звезд</td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td class="num-review">22</td>
-                                    </tr>
-                                </table>
-
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#write-review">Написать отзыв</button>
-                                <a class="d-block" href="#" data-toggle="modal" data-target="#no-buy-product">товар еще не покупался</a>
-                                <a class="d-block" href="#" data-toggle="modal" data-target="#login-continue">войдите, чтобы продолжить</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 <section class="other-products-section section-tabs">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Другие товары поставщика</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="tab-2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">С этим товаром покупают</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="tab-3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Похожие товары</a>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-12 mob-gutters">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Другие товары поставщика</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="tab-2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">С этим товаром покупают</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="tab-3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Похожие товары</a>
+                                </li>
+                            </ul>
 
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                                    <h2 class="title d-sm-none">Другие товары поставщика</h2>
+                                    <div id="slider-product-detail-1-1" class="card-slider">
+                                        <div>
+                                            <div class="card card-product">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product action">
+                                                <div class="percent-badge">-27%</div>
+                                                <div class="card-header">
+                                                    Акция: 3 дня
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">293.33 &#8381;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product info">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                    <a href="#"><img src="img/doubts_button.png" alt=""></a>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product in-card">
+                                                <div class="card-header">
+                                                    <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product add-card">
+                                                <div class="card-header">
+                                                    Товар добавлен в корзину <img src="img/green_check.png" alt="">
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                    <div class="counter-block">
+                                                        <div class="counter">
+                                                            <button type="button" class="quantity-minus">-</button>
+                                                            <div class="count">18</div>
+                                                            <button type="button" class="quantity-plus">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div id="slider-product-detail-1" class="card-slider">
-                                <div>
-                                    <div class="card card-product">
-                                        <div class="card-header">
-                                            Вы экономите 200 руб.
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
+                                </div>
+                                <div class="tab-pane" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                                    <h2 class="title d-sm-none">Вы смотрели</h2>
+                                    <div id="slider-product-detail-1-2" class="card-slider">
+                                        <div>
+                                            <div class="card card-product">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
                                                 </div>
-                                                <button class="btn btn-buy">Купить</button>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                        <div>
+                                            <div class="card card-product action">
+                                                <div class="percent-badge">-27%</div>
+                                                <div class="card-header">
+                                                    Акция: 3 дня
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">293.33 &#8381;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product info">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                    <a href="#"><img src="img/doubts_button.png" alt=""></a>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product in-card">
+                                                <div class="card-header">
+                                                    <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product add-card">
+                                                <div class="card-header">
+                                                    Товар добавлен в корзину <img src="img/green_check.png" alt="">
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                    <div class="counter-block">
+                                                        <div class="counter">
+                                                            <button type="button" class="quantity-minus">-</button>
+                                                            <div class="count">18</div>
+                                                            <button type="button" class="quantity-plus">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product action">
-                                        <div class="percent-badge">-27%</div>
-                                        <div class="card-header">
-                                            Акция: 3 дня
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">293.33 &#8381;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product info">
-                                        <div class="card-header">
-                                            Вы экономите 200 руб.
-                                            <a href="#"><img src="img/doubts_button.png" alt=""></a>
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product in-card">
-                                        <div class="card-header">
-                                            <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product add-card">
-                                        <div class="card-header">
-                                            Товар добавлен в корзину <img src="img/green_check.png" alt="">
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                            <div class="counter-block">
-                                                <div class="counter">
-                                                    <button type="button" class="quantity-minus">-</button>
-                                                    <div class="count">18</div>
-                                                    <button type="button" class="quantity-plus">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                            2
-                        </div>
-                        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                            3
+                                </div>
+                                <div class="tab-pane" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                                    <h2 class="title d-sm-none">С этим товаром покупают</h2>
+                                    <div id="slider-product-detail-1-3" class="card-slider">
+                                        <div>
+                                            <div class="card card-product">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product action">
+                                                <div class="percent-badge">-27%</div>
+                                                <div class="card-header">
+                                                    Акция: 3 дня
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">293.33 &#8381;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product info">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                    <a href="#"><img src="img/doubts_button.png" alt=""></a>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product in-card">
+                                                <div class="card-header">
+                                                    <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product add-card">
+                                                <div class="card-header">
+                                                    Товар добавлен в корзину <img src="img/green_check.png" alt="">
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                    <div class="counter-block">
+                                                        <div class="counter">
+                                                            <button type="button" class="quantity-minus">-</button>
+                                                            <div class="count">18</div>
+                                                            <button type="button" class="quantity-plus">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>                            
                         </div>
                     </div>
+
                 </section>
 
                 <section class="related-products-section section-tabs">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-21" role="tab" aria-controls="tab-21" aria-selected="true">Вы смотрели</a>
-                        </li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-12 mob-gutters">
 
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tab-21" role="tabpanel" aria-labelledby="tab-21">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-21" role="tab" aria-controls="tab-21" aria-selected="true">Вы смотрели</a>
+                                </li>
+                            </ul>
 
-                            <div id="slider-product-detail-2" class="card-slider">
-                                <div>
-                                    <div class="card card-product">
-                                        <div class="card-header">
-                                            Вы экономите 200 руб.
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="tab-21" role="tabpanel" aria-labelledby="tab-21">
+                                    <h2 class="title d-sm-none">Похожие товары</h2>
+                                    <div id="slider-product-detail-2" class="card-slider">
+                                        <div>
+                                            <div class="card card-product">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
                                                 </div>
-                                                <button class="btn btn-buy">Купить</button>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                        <div>
+                                            <div class="card card-product action">
+                                                <div class="percent-badge">-27%</div>
+                                                <div class="card-header">
+                                                    Акция: 3 дня
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">293.33 &#8381;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product info">
+                                                <div class="card-header">
+                                                    Вы экономите 200 руб.
+                                                    <a href="#"><img src="img/doubts_button.png" alt=""></a>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product in-card">
+                                                <div class="card-header">
+                                                    <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="card card-product add-card">
+                                                <div class="card-header">
+                                                    Товар добавлен в корзину <img src="img/green_check.png" alt="">
+                                                </div>
+                                                <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
+                                                <div class="card-body">
+                                                    <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
+                                                    <div class="separator"></div>
+                                                    <div class="buy-block">
+                                                        <div class="price-block">
+                                                            <div class="price">261.10 &#8381;</div>
+                                                            <div class="old-price">&nbsp;</div>
+                                                        </div>
+                                                        <button class="btn btn-buy">Купить</button>
+                                                    </div>
+                                                    <div class="counter-block">
+                                                        <div class="counter">
+                                                            <button type="button" class="quantity-minus">-</button>
+                                                            <div class="count">18</div>
+                                                            <button type="button" class="quantity-plus">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="text-sold-by">Продается по 2 шт.</div>
+                                                    <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
-                                <div>
-                                    <div class="card card-product action">
-                                        <div class="percent-badge">-27%</div>
-                                        <div class="card-header">
-                                            Акция: 3 дня
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">293.33 &#8381;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product info">
-                                        <div class="card-header">
-                                            Вы экономите 200 руб.
-                                            <a href="#"><img src="img/doubts_button.png" alt=""></a>
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product in-card">
-                                        <div class="card-header">
-                                            <img src="img/green_car.png" alt=""><span>У вас есть товар этого поставщика в корзине</span>
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="card card-product add-card">
-                                        <div class="card-header">
-                                            Товар добавлен в корзину <img src="img/green_check.png" alt="">
-                                        </div>
-                                        <a class="img-link" href="#"><img src="img/image4.png" class="card-img-top" alt=""></a>
-                                        <div class="card-body">
-                                            <a href="#" class="card-title">Колбаса вареная Вязанка Классическая вект. руч.вяз. т/упак., 10 кг</a>
-                                            <div class="separator"></div>
-                                            <div class="buy-block">
-                                                <div class="price-block">
-                                                    <div class="price">261.10 &#8381;</div>
-                                                    <div class="old-price">&nbsp;</div>
-                                                </div>
-                                                <button class="btn btn-buy">Купить</button>
-                                            </div>
-                                            <div class="counter-block">
-                                                <div class="counter">
-                                                    <button type="button" class="quantity-minus">-</button>
-                                                    <div class="count">18</div>
-                                                    <button type="button" class="quantity-plus">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-sold-by">Продается по 2 шт.</div>
-                                            <div class="text-availability"><img src="img/mdi_truck-delivery.png" alt=""> В наличии у 4 поставщиков</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
-
                         </div>
-
                     </div>
                 </section>
 

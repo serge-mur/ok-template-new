@@ -439,10 +439,11 @@ $(document).ready(function() {
     });
 
     // Карточка товара
-    $('#slider-product-detail-1').slick({
+
+    $('#slider-product-detail-1-1').slick({
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         dots: true,
         arrows: false,
         responsive: [{
@@ -466,10 +467,82 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            },
+        ]
+    });
+
+    $('#slider-product-detail-1-2').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     centerMode: true,
                     variableWidth: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            },
+        ]
+    });
+
+    $('#slider-product-detail-1-3').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        arrows: false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
@@ -478,7 +551,7 @@ $(document).ready(function() {
     $('#slider-product-detail-2').slick({
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         dots: true,
         arrows: false,
         responsive: [{
@@ -502,13 +575,24 @@ $(document).ready(function() {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    variableWidth: true
+                    centerMode: false,
+                    variableWidth: false
                 }
             },
         ]
+    });
+
+    // cor slider in tabs
+    $('.nav-tabs .nav-link').on('shown.bs.tab', function() {
+        let $tabPane = $($(this).attr('href'));
+        $('.card-slider', $tabPane).slick('refresh');
+
+        setArrows('#slider-product-detail-1-1.card-slider');
+        setArrows('#slider-product-detail-1-2.card-slider');
+        setArrows('#slider-product-detail-1-3.card-slider');
+
     });
 
     if ($(window).width() > 575) {
@@ -520,9 +604,19 @@ $(document).ready(function() {
         setArrows('.recipes-slider');
         setArrows('#slider-product-4.card-slider');
         setArrows('#slider-product-5.card-slider');
-        setArrows('#slider-product-detail-1.card-slider');
+        // setArrows('#slider-product-detail-1.card-slider');
+        setArrows('#slider-product-detail-1-1.card-slider');
+        setArrows('#slider-product-detail-1-2.card-slider');
+        setArrows('#slider-product-detail-1-3.card-slider');
         setArrows('#slider-product-detail-2.card-slider');
         setArrows('.article-slider');
+
+
+        // disable collapse for desktop
+        $(".mob-collapse h2.title").attr("data-toggle","");
+        $(".mob-collapse h2.title").removeClass('collapsed');
+        $(".mob-collapse .collapse").addClass('show');
+
     }
 
     if ($(window).width() <= 575) {
@@ -587,6 +681,10 @@ $(document).ready(function() {
                 },
             ]
         });
+
+        // disable tabs card detail
+        $('.tab-content>div').removeClass('tab-pane');
+
 
     }
 

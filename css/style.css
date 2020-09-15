@@ -1351,9 +1351,20 @@ li {
     opacity: 0;
 }
 
+
+.section-tabs .card-product .card-footer {
+    display: none;
+}
+.section-tabs .card-product.add-card {
+    height: 374px;
+}
+
 @media (max-width: 575px) {
     .card-product {
         height: 100%!important;
+    }
+    .section-tabs .card-product {
+        height: 390px!important;
     }
     .card-product .card-header {
         border-radius: 0;
@@ -1499,6 +1510,7 @@ li {
     }
 
 }
+
 
 /* ********************* */
 /* offcanvas-cart styles */
@@ -2438,7 +2450,7 @@ section h2 {
     margin-bottom: 0;
   
 }
-.close-btn {
+.modal .close-btn {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -2760,6 +2772,29 @@ h1.title .discount .percent {
 
 .package-choice-block .package-item .price {
     font-weight: bold;
+    white-space: nowrap;
+}
+
+@media (max-width: 575px) {
+    .package-choice-block .package-item {
+        min-width: 70px;
+        min-height: 70px;
+    }
+    .package-choice-block .package-item .package-item-header {
+        font-size: 0.75rem;
+        padding: 3px;    
+    }
+    .package-choice-block .package-item .package-item-body {
+        padding: 5px 5px;
+    }
+    .package-choice-block .package-item.with-title .package-item-body {
+        padding: 5px 5px;
+        height: 46px;
+    }
+    .package-choice-block .package-item>div {
+        color: #000;
+        font-size: 0.75rem;
+    }
 }
 
 .detail-middle-block .sold-in {
@@ -2769,21 +2804,21 @@ h1.title .discount .percent {
     margin: 10px 0 40px 0;
 }
 
-.detail-middle-block .specifications-table {
+.specifications-table {
     color: var(--gray);
     font-size: 0.875rem;
     margin-bottom: 40px;
 }
 
-.detail-middle-block .specifications-table tr td {
+.specifications-table tr td {
     padding-bottom: 20px;
 }
 
-.detail-middle-block .specifications-table tr td:first-child {
+.specifications-table tr td:first-child {
     padding-right: 30px;
 }
 
-.detail-middle-block .specifications-table tr td:last-child {
+.specifications-table tr td:last-child {
     color: var(--black-gray);
     font-weight: bold;
 }
@@ -2858,8 +2893,6 @@ h1.title .discount .percent {
     color: var(--gray);
 }
 
-.detail-buy-block .seller-link-block a {}
-
 .utp-block>div {
     color: var(--gray);
     font-size: 0.875rem;
@@ -2879,6 +2912,33 @@ h1.title .discount .percent {
     font-weight: bold;
     line-height: 135%;
     letter-spacing: 0.05em;
+}
+@media (max-width: 575px) {
+    .mob-collapse {
+        margin-bottom: 15px!important;
+    }
+    .mob-collapse .title[data-toggle='collapse'] {
+        background-color: var(--second);
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 135%;
+        letter-spacing: normal;
+        padding: 8px 10px;
+        margin: 15px -15px;
+    }
+    .mob-collapse .title[data-toggle='collapse']:after {
+        display: inline-block;
+        content: '';
+        width: 9px;
+        height: 8px;
+        padding-left: 5px;
+        background: url(../img/collapse_up.png);
+        float: right;
+    }
+    .mob-collapse .title[data-toggle='collapse'].collapsed:after {
+        background: url(../img/collapse_down.png);
+    }
 }
 
 .all-sellers {
@@ -2995,6 +3055,15 @@ h1.title .discount .percent {
 .description-product-section .how-to-make-order .btn {
     padding: 7px 23px;
 }
+@media (max-width: 575px) {
+    .description-product-section .composition-block .composition-item .dig {
+        font-size: 1.25rem;
+    }
+    .description-product-section .composition-block .composition-item .name {
+        font-size: 1rem;
+    }
+}
+
 
 .reviews-section .reviews-block {
     margin-bottom: 80px;
@@ -3205,7 +3274,7 @@ h1.title .discount .percent {
 
 
 .section-tabs .nav-tabs {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--main);
 }
 
 .section-tabs .nav-tabs .nav-item {
@@ -3220,21 +3289,22 @@ h1.title .discount .percent {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--main);
 }
 
 .section-tabs .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
     color: var(--main);
     background-color: #fff;
-    border-color: var(--border) var(--border) #fff;
+    border-color: var(--main) var(--main) #fff;
 }
 
 .section-tabs .tab-content {
-    border: 1px solid var(--border);
+    border: 1px solid var(--main);
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    /* border-top-right-radius: 10px; */
     padding: 30px 0 90px 0;
 }
 
@@ -3254,4 +3324,15 @@ h1.title .discount .percent {
 .related-products-section .slick-dots-wrapper {
     top: calc(100% + 45px);
     right: calc(50% - 90px);
+}
+
+@media (max-width: 575px) {
+    .section-tabs .nav-tabs {
+        display: none;
+    }
+    .section-tabs .tab-content {
+        border: none;
+        border-top: none;
+        padding: 0;
+    }
 }
