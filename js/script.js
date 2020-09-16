@@ -103,14 +103,25 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
-        focusOnSelect: true
+        focusOnSelect: true,
+        responsive: [{
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: false,
+                variableWidth: false,
+                vertical: true,
+                arrows: false
+            }
+        }, ]
     });
 
     // Товары которые вы смотрели и покупали
     $('#slider-product-1.card-slider').slick({
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         dots: true,
         arrows: false,
         responsive: [{
@@ -331,7 +342,7 @@ $(document).ready(function() {
     $('#slider-product-4.card-slider').slick({
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         dots: true,
         arrows: false,
         responsive: [{
@@ -368,7 +379,7 @@ $(document).ready(function() {
     $('#slider-product-5.card-slider').slick({
         infinite: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         dots: true,
         arrows: false,
         responsive: [{
@@ -613,7 +624,7 @@ $(document).ready(function() {
 
 
         // disable collapse for desktop
-        $(".mob-collapse h2.title").attr("data-toggle","");
+        $(".mob-collapse h2.title").attr("data-toggle", "");
         $(".mob-collapse h2.title").removeClass('collapsed');
         $(".mob-collapse .collapse").addClass('show');
 
@@ -669,17 +680,15 @@ $(document).ready(function() {
             slidesToScroll: 1,
             arrows: false,
             dots: false,
-            responsive: [
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        centerMode: false,
-                        variableWidth: true
-                    }
-                },
-            ]
+            responsive: [{
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: true
+                }
+            }, ]
         });
 
         // disable tabs card detail
@@ -785,8 +794,8 @@ $('.radio-group .radio').click(function() {
         $(this).parent().find('.radio').removeClass('selected');
         $(this).addClass('selected');
         var val = $(this).attr('data-value');
-        $(this).parent().find('input').val(val); 
-        
+        $(this).parent().find('input').val(val);
+
         setCounter(parseInt(val));
     }
 
@@ -798,19 +807,19 @@ function setCounter(step) {
     $('.counter .count').attr('data-step', quantity);
 }
 
-$('.counter .quantity-plus').click(function(e){
+$('.counter .quantity-plus').click(function(e) {
     var step = parseInt($('.counter .count').attr('data-step'));
     var quantity = parseInt($('.counter .count').val());
-        $('.counter .count').val(quantity + step);  
+    $('.counter .count').val(quantity + step);
 });
 
-$('.counter .quantity-minus').click(function(e){
+$('.counter .quantity-minus').click(function(e) {
     var step = parseInt($('.counter .count').attr('data-step'));
     var quantity = parseInt($('.counter .count').val());
-        if(quantity>step){
-            $('.counter .count').val(quantity - step);
-        } else {
-            $('.buy-step-2').hide();
-            $('.buy-step-1').show();
-        }
+    if (quantity > step) {
+        $('.counter .count').val(quantity - step);
+    } else {
+        $('.buy-step-2').hide();
+        $('.buy-step-1').show();
+    }
 });
