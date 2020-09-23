@@ -1091,6 +1091,12 @@ li {
     font-weight: 500;
 }
 
+.card-brands .img-wrapper {
+    display: flex;
+    height: 150px;
+    align-items: center;
+}
+
 .card-brands .card-img-top {
     display: block;
     margin: 30px auto;
@@ -1210,6 +1216,7 @@ li {
     justify-content: center;
     align-items: center;
     padding: 40px 5px 20px 5px;
+    height: 240px;
 }
 
 .card-product .img-link .card-img-top {
@@ -1222,6 +1229,9 @@ li {
 }
 
 .card-product .card-title {
+    display: flex;
+    height: 45px;
+    align-items: center;
     color: #000;
     font-size: 1rem;
     font-weight: 500;
@@ -1405,7 +1415,7 @@ li {
 
 .card-product.add-card .counter-block {
     text-align: center;
-    margin: 30px 0 10px 0;
+    margin: 15px 0 10px 0;
 }
 
 
@@ -1526,13 +1536,13 @@ li {
         height: 40px;
     }
     .card-product.add-card .card-title {
-        display: inline;
+        display: flex;
     }
     .card-product.add-card .buy-block {
         display: none;
     }
     .card-product.add-card .counter-block {
-        margin-top: 15px;
+        margin: 25px 0 0px 0;
     }
     .card-product.in-card {
         border-width: 1px;
@@ -1890,6 +1900,28 @@ li {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
     background-image: url(../img/checkbox_ico.svg);
+}
+
+.custom-radio .custom-control-input~.custom-control-label::before {
+    color: #fff;
+    border-color: var(--main);
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: var(--main);
+    background-color: var(--main);
+}
+
+.custom-radio .custom-control-label {
+    color: var(--gray);
+    font-size: 1rem;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label {
+    color: #000;
 }
 
 
@@ -2445,6 +2477,25 @@ section h2 {
 
 .filters-block .filter-block .custom-control.custom-checkbox {
     margin-bottom: 15px;
+}
+
+.filters-block .filter-block .scroll-list {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.filters-block .filter-block .scroll-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filters-block .filter-block .scroll-list::-webkit-scrollbar-thumb {
+    background: rgba(124, 124, 124, .3);
+    border-radius: 5px;
+}
+
+.filters-block .filter-block .scroll-list::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100px;
 }
 
 .filters-block .filter-block .form-control.fill {
@@ -3373,6 +3424,29 @@ h1.title .discount .percent {
 }
 
 
+/* select rating */
+
+.btnrating {
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: url(../img/big_star.svg) no-repeat;
+}
+
+.btnrating:focus {
+    outline: none;
+}
+
+.btnrating:hover {
+    cursor: pointer;
+}
+
+.btnrating.btn-star-on {
+    background: url(/img/big_star_fill.svg) no-repeat;
+}
+
+
 /* set rating */
 
 .set-rating {
@@ -3384,6 +3458,7 @@ h1.title .discount .percent {
 
 .set-rating .set-rating-item {
     width: 115px;
+    text-align: center;
 }
 
 .set-rating .set-rating-item .star {
@@ -3406,11 +3481,20 @@ h1.title .discount .percent {
     text-align: center;
 }
 
-.modal#login-continue .modal-body {
+@media (max-width: 575px) {
+    .set-rating .set-rating-item .name {
+        display: none;
+    }
+}
+
+
+/* modals registration and login */
+
+.modal-login .modal-body {
     padding-bottom: 90px;
 }
 
-.modal#login-continue h3 {
+.modal-login h3 {
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 135%;
@@ -3419,7 +3503,7 @@ h1.title .discount .percent {
     margin-bottom: 40px;
 }
 
-.modal#login-continue .form-group input {
+.modal-login .form-group input {
     background-color: var(--second);
     border-color: transparent;
     font-size: 0.875rem;
@@ -3429,7 +3513,73 @@ h1.title .discount .percent {
     width: 270px;
 }
 
-.modal#login-continue .form-group .form-link {
+.modal-login #login-link {
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+
+.modal-login #registration-block .form-group input {
+    margin: 0;
+    /* width: auto; */
+}
+
+.modal-login #registration-block .organization-block .form-group input {
+    margin: 0 auto;
+}
+
+.modal-login #registration-block .code-block {
+    text-align: left;
+}
+
+.modal-login #registration-block .code-block p {
+    color: #000;
+    font-size: 0.875rem;
+}
+
+.modal-login #registration-block .code-block small {
+    color: var(--gray);
+    font-size: 0.6875rem;
+}
+
+.modal-login #registration-block .code-block .code-input {
+    width: 170px;
+}
+
+.modal-login #registration-block .custom-checkbox {
+    margin: 25px 0;
+}
+
+.modal-login #registration-block .custom-checkbox label {
+    color: #000;
+    font-size: 0.6875rem;
+    line-height: 135%;
+    font-weight: normal;
+}
+
+.modal-login #registration-block .info-text {
+    color: #000;
+    font-size: 1rem;
+    line-height: 135%;
+    font-weight: normal;
+    margin: 50px 0 25px 0;
+}
+
+.modal-login #registration-block .persone-type {
+    margin-bottom: 25px;
+}
+
+.modal-login #registration-block .organization-block {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .modal-login .modal-dialog.modal-lg {
+        max-width: 670px;
+    }
+}
+
+.modal-login .form-group .form-link {
     display: block;
     color: var(--gray);
     font-size: 0.6875rem;
@@ -3438,13 +3588,17 @@ h1.title .discount .percent {
     width: 270px;
 }
 
-.modal#login-continue .form-group .form-link:hover {
+.modal-login .form-group .form-link:hover {
     color: var(--gray);
 }
 
-.modal#login-continue .btn {
+.modal-login .btn {
     letter-spacing: 0.05em;
     padding: 7px 23px;
+}
+
+#registration-block {
+    display: none;
 }
 
 .modal#no-buy-product .modal-body h3 {

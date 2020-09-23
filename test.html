@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,53 +16,77 @@
         border: 1px solid gray;
         /* background: url(test.png), linear-gradient(white 50%, red 50%); */
     }
-
-    .starRating:not(old){
-  display        : inline-block;
-  width          : 7.5em;
-  height         : 1.5em;
-  overflow       : hidden;
-  vertical-align : bottom;
-}
-.starRating:not(old) > input{
-  margin-right : -100%;
-  opacity      : 0;
-}
-.starRating:not(old) > label{
-  display         : block;
-  float           : right;
-  position        : relative;
-  background      : url('star-off.svg');
-  background-size : contain;
-}
-.starRating:not(old) > label:before{
-  content         : '';
-  display         : block;
-  width           : 1.5em;
-  height          : 1.5em;
-  background      : url('img/star.png');
-  background-size : contain;
-  opacity         : 0;
-  transition      : opacity 0.2s linear;
-}
-.starRating:not(old) > label:hover:before,
-.starRating:not(old) > label:hover ~ label:before,
-.starRating:not(:hover) > :checked ~ label:before{
-  opacity : 1;
-}
-
+    
+    .starRating:not(old) {
+        display: inline-block;
+        width: 7.5em;
+        height: 1.5em;
+        overflow: hidden;
+        vertical-align: bottom;
+    }
+    
+    .starRating:not(old)>input {
+        margin-right: -100%;
+        opacity: 0;
+    }
+    
+    .starRating:not(old)>label {
+        display: block;
+        float: right;
+        position: relative;
+        background: url('star-off.svg');
+        background-size: contain;
+    }
+    
+    .starRating:not(old)>label:before {
+        content: '';
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        background: url('img/star.png');
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+    }
+    
+    .starRating:not(old)>label:hover:before,
+    .starRating:not(old)>label:hover~label:before,
+    .starRating:not(:hover)> :checked~label:before {
+        opacity: 1;
+    }
+    
+    .btnrating {
+        padding: 0;
+        border: none;
+        width: 40px;
+        height: 40px;
+        background: url(/img/big_star.svg) no-repeat;
+    }
+    
+    .btnrating:focus {
+        outline: none;
+    }
+    
+    .btnrating:hover {
+        cursor: pointer;
+    }
+    
+    .btnrating.btn-star-on {
+        background: url(/img/big_star_fill.svg) no-repeat;
+    }
 </style>
+
 <body>
 
-<div>
-    <a href="#" data-progress="10" data-color="green" class="cart-progress1"></a>
-    <a href="#" data-progress="50" data-color="red" class="cart-progress2"></a>
-    <a href="#" data-progress="90" data-color="blue" class="cart-progress3"></a>        
-</div>
+    <div>
+        <a href="#" data-progress="10" data-color="green" class="cart-progress1"></a>
+        <a href="#" data-progress="50" data-color="red" class="cart-progress2"></a>
+        <a href="#" data-progress="90" data-color="blue" class="cart-progress3"></a>
+    </div>
 
-<div>
+    <div>
 
-    <span class="starRating">
+        <span class="starRating">
         <input id="rating5" type="radio" name="rating" value="5">
         <label for="rating5">5</label>
         <input id="rating4" type="radio" name="rating" value="4">
@@ -75,26 +100,62 @@
     </span>
 
 
-</div>
+    </div>
+
+    <div>
+
+        <div class="form-group" id="rating-ability-wrapper">
+            <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+            <div class="d-none">
+                <span class="selected-rating">0</span> <span>/ 5</span>
+            </div>
+            <button type="button" class="btnrating" data-attr="1" id="rating-star-1"></button>
+            <button type="button" class="btnrating" data-attr="2" id="rating-star-2"></button>
+            <button type="button" class="btnrating" data-attr="3" id="rating-star-3"></button>
+            <button type="button" class="btnrating" data-attr="4" id="rating-star-4"></button>
+            <button type="button" class="btnrating" data-attr="5" id="rating-star-5"></button>
+        </div>
+
+    </div>
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>    
-<script>
-$( document ).ready(function() {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
 
-    cartProgress('.cart-progress1');
-    cartProgress('.cart-progress2');
-    cartProgress('.cart-progress3');
+            cartProgress('.cart-progress1');
+            cartProgress('.cart-progress2');
+            cartProgress('.cart-progress3');
 
-    function cartProgress(element) {
-        let progress = $(element).data('progress'), color = $(element).data('color');
-        $(element).css('background', 'url(test.png), linear-gradient(white '+ (100-progress) +'%, '+ color +' '+ (100-progress) +'%)');
-    }
+            function cartProgress(element) {
+                let progress = $(element).data('progress'),
+                    color = $(element).data('color');
+                $(element).css('background', 'url(test.png), linear-gradient(white ' + (100 - progress) + '%, ' + color + ' ' + (100 - progress) + '%)');
+            }
 
 
-});
-</script>
+
+
+
+            $(".btnrating").on('click', (function(e) {
+                var previous_value = $("#selected_rating").val();
+                var selected_value = $(this).attr("data-attr");
+                $("#selected_rating").val(selected_value);
+                $(".selected-rating").empty();
+                $(".selected-rating").html(selected_value);
+                for (i = 1; i <= selected_value; ++i) {
+                    $("#rating-star-" + i).toggleClass('btn-star-on');
+                }
+                for (ix = 1; ix <= previous_value; ++ix) {
+                    $("#rating-star-" + ix).toggleClass('btn-star-on');
+                }
+            }));
+
+
+        });
+    </script>
 
 </body>
+
 </html>

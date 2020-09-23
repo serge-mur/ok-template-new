@@ -810,7 +810,7 @@
 
                                     <button class="btn btn-primary" data-toggle="modal" data-target="#write-review">Написать отзыв</button>
                                     <a class="d-block" href="#" data-toggle="modal" data-target="#no-buy-product">товар еще не покупался</a>
-                                    <a class="d-block" href="#" data-toggle="modal" data-target="#login-continue">войдите, чтобы продолжить</a>
+                                    <a class="d-block" href="#" data-toggle="modal" data-target="#registration-login">регистрация и авторизация</a>
 
                                 </div>
                             </div>
@@ -1554,7 +1554,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Как сделать заказ</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                    <span aria-hidden="true"><img src="img/close_btn.svg" alt=""></span>
                 </button>
                 </div>
                 <div class="modal-body">
@@ -1579,7 +1579,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                    <span aria-hidden="true"><img src="img/close_btn.svg" alt=""></span>
                 </button>
                 </div>
                 <div class="modal-body text-center">
@@ -1591,35 +1591,111 @@
         </div>
     </div>
 
-    <!-- login modal -->
-    <div class="modal" tabindex="-1" id="login-continue">
+    <!-- registration and login modal -->
+    <div class="modal modal-login" tabindex="-1" id="registration-login">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h5>Войдите или зарегистрируйтесь</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                    <span aria-hidden="true"><img src="img/close_btn.svg" alt=""></span>
                 </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h3>Войдите или зарегистрируйтесь, чтобы продолжить</h3>
-                    <form>
-                        <div class="mb-3">Вход</div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Богдан" id="email1">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control mb-1" placeholder="Пароль" id="password1">
-                            <a class="form-link" href="#">Забыли пароль?</a>
-                        </div>
+                    <div id="registration-block">
+                        <h3 class="mb-4 position-relative"><button class="btn" id="login-link"><img src="img/arrow_back.svg" alt=""></button> Регистрация</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Имя" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Город" id="city">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Телефон" id="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email" id="email1">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Пароль" id="password2">
+                                        <!-- <a class="form-link" href="#">Забыли пароль?</a> -->
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="code-block">
+                                        <p>Проверочный код</p>
+                                        <img class="d-block" src="img/code.png" alt="">
+                                        <small>Чтобы изменить картинку нажмите на нее</small>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control code-input" placeholder="Код" id="code">
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Нажимая кнопку «Зарегистрироваться», я принимаю условия <a href="#">Пользовательского соглашения</a> и даю своё согласие Откоробки.ру на обработку моей персональной информации на условиях, определенных <a href="#">Политикой конфиденциальности</a>.</label>
+                                        </div>
+                                    </div>
 
-                        <button type="submit" class="btn btn-primary">Войти</button>
-                        <div class="my-3">или</div>
-                        <button type="submit" class="btn btn-secondary">Зарегистрироваться</button>
-                    </form>
+                                </div>
+                            </div>
+
+                            <p class="info-text">Только для юридических лиц: <br><b>Акции, специальные предложения поставщиков и возможность вызвать торгового представителя.</b></p>
+                            <div class="persone-type">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="private-radio" name="customRadioInline1" class="custom-control-input" checked>
+                                    <label class="custom-control-label" for="private-radio">Частный покупатель</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="org-radio" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="org-radio">Организация</label>
+                                </div>
+                            </div>
+                            <div class="organization-block">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="ИНН" id="company-inn">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Название компании" id="company-name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Тип" id="company-type">
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="login-block">
+                        <h3>Войдите или зарегистрируйтесь, чтобы продолжить</h3>
+                        <form>
+                            <div class="mb-3">Вход</div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Богдан" id="email1">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control mb-1" placeholder="Пароль" id="password1">
+                                <a class="form-link" href="#">Забыли пароль?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                            <div class="my-3">или</div>
+
+                        </form>
+                        <button class="btn btn-secondary" id="registration-link">Зарегистрироваться</button>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
 
     <!-- write review -->
     <div class="modal" tabindex="-1" id="write-review">
@@ -1628,34 +1704,41 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Напишите отзыв</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                    <span aria-hidden="true"><img src="img/close_btn.svg" alt=""></span>
                 </button>
                 </div>
                 <div class="modal-body">
-                    <div class="set-rating">
-                        <div class="set-rating-item">
-                            <div class="star"></div>
-                            <div class="name">Плохой</div>
-                        </div>
-                        <div class="set-rating-item">
-                            <div class="star"></div>
-                            <div class="name">Так себе</div>
-                        </div>
-                        <div class="set-rating-item">
-                            <div class="star"></div>
-                            <div class="name">Нормальный</div>
-                        </div>
-                        <div class="set-rating-item">
-                            <div class="star"></div>
-                            <div class="name">Хороший</div>
-                        </div>
-                        <div class="set-rating-item">
-                            <div class="star"></div>
-                            <div class="name">Отличный</div>
-                        </div>
-                    </div>
-
                     <form>
+
+                        <div class="form-group" id="rating-ability-wrapper">
+                            <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+                            <div class="d-none">
+                                <span class="selected-rating">0</span> <span>/ 5</span>
+                            </div>
+                            <div class="set-rating">
+                                <div class="set-rating-item">
+                                    <button type="button" class="btnrating" data-attr="1" id="rating-star-1"></button>
+                                    <div class="name">Плохой</div>
+                                </div>
+                                <div class="set-rating-item">
+                                    <button type="button" class="btnrating" data-attr="2" id="rating-star-2"></button>
+                                    <div class="name">Так себе</div>
+                                </div>
+                                <div class="set-rating-item">
+                                    <button type="button" class="btnrating" data-attr="3" id="rating-star-3"></button>
+                                    <div class="name">Нормальный</div>
+                                </div>
+                                <div class="set-rating-item">
+                                    <button type="button" class="btnrating" data-attr="4" id="rating-star-4"></button>
+                                    <div class="name">Хороший</div>
+                                </div>
+                                <div class="set-rating-item">
+                                    <button type="button" class="btnrating" data-attr="5" id="rating-star-5"></button>
+                                    <div class="name">Отличный</div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="comment">Комментарий</label>
                             <textarea class="form-control" id="comment" rows="6" placeholder="Напишите ваш комментарий"></textarea>
@@ -1681,7 +1764,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title">Укажите ваш город</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="img/close_gray.png" alt=""></span>
+                    <span aria-hidden="true"><img src="img/close_btn.svg" alt=""></span>
                 </button>
                 </div>
                 <div class="modal-body">

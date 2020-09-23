@@ -91,6 +91,34 @@ $(document).ready(function() {
     });
 
 
+    // login and registration modal scripts
+    $('#registration-login').on('shown.bs.modal', function() {
+
+        $('#registration-link').click(function() {
+            $(this).closest('.modal-dialog').toggleClass('modal-lg');
+            $('#login-block').css('display', 'none');
+            $('#registration-block').css('display', 'block');
+        });
+
+        $('#login-link').click(function() {
+            $(this).closest('.modal-dialog').toggleClass('modal-lg');
+            $('#registration-block').css('display', 'none');
+            $('#login-block').css('display', 'block');
+        });
+
+        $("#org-radio").click(function() {
+            if ($(this).is(':checked')) {
+                $(".modal-login #registration-block .organization-block").css('display', 'block');
+            };
+        });
+        $("#private-radio").click(function() {
+            if ($(this).is(':checked')) {
+                $(".modal-login #registration-block .organization-block").css('display', 'none');
+            };
+        });
+    });
+
+
     // slider in card detail
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -823,3 +851,17 @@ $('.counter .quantity-minus').click(function(e) {
         $('.buy-step-1').show();
     }
 });
+
+$(".btnrating").on('click', (function(e) {
+    var previous_value = $("#selected_rating").val();
+    var selected_value = $(this).attr("data-attr");
+    $("#selected_rating").val(selected_value);
+    $(".selected-rating").empty();
+    $(".selected-rating").html(selected_value);
+    for (i = 1; i <= selected_value; ++i) {
+        $("#rating-star-" + i).toggleClass('btn-star-on');
+    }
+    for (ix = 1; ix <= previous_value; ++ix) {
+        $("#rating-star-" + ix).toggleClass('btn-star-on');
+    }
+}));
